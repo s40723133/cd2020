@@ -154,18 +154,44 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">2.利用random.shffle的方式洗出組別 << <a href='2.利用random.shffle的方式洗出組別.html'>Previous</a> <a href='變數.html'>Next</a> >> 變數<br /><h1>shuffle(洗牌)</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+number_list = [7,14,21,28,35,42,49,56,63,70]
+
+print("原始列表：",number_list)
+
+random.shuffle(number_list) #shuffle方法
+
+print("第一次洗牌之後的列表：",number_list)
+
+random.shuffle(number_list)
+
+print("第二次洗牌之後列出：",number_list)
+
+原始列表： [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+
+first shuffle：之後的列表： [35, 28, 70, 14, 21, 63, 7, 49, 42, 56]
+
+第二次洗牌之後列出： [21, 7, 70, 28, 56, 14, 63, 42, 35, 49]
+
+
+
+原文網址：https://kknews.cc/code/z9vx6zg.html</pre>
+<p>我們可以從這了解到shuffle是一個將數列重新排列的方式</p>
+<p>接著我們利用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#列印數列
+print(group)
+#列印數列(1~12)
+print(group[0:12])
+#列印數列(13~24)
+print(group[12:24])
+#列印數列(25~36)
+print(group[24:36])
+#列印數列(37~49)
+print(group[36:49])</pre>
+<p>的方式可以以不重複的方法分出4組組員</p>
+<br />2.利用random.shffle的方式洗出組別 << <a href='2.利用random.shffle的方式洗出組別.html'>Previous</a> <a href='變數.html'>Next</a> >> 變數</div>
         
     <!-- footer -->
       <div class="container">

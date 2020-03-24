@@ -13,11 +13,108 @@
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>week2</h1>
-<h6>在這周將python版本更新至3.8.2，並且於直播開會中分出了各個任務的成員</h6>
-<h3>解析亂數分組重點</h3>
-<h4>1解析迴圈</h4>
-<h4>2如何用在網頁上</h4>
-<h4>3抓取資料</h4>
+<h1>WEEK2</h1>
+<h4>在這周將python版本更新至3.8.2，並且於直播開會中分出了各個任務的成員</h4>
+<h3>解釋亂數分組之程序</h3>
+<h3>1.random模組的應用</h3>
 <p></p>
-<h1>week4</h1>
+<p>參考資料:<a href="https://www.runoob.com/python/func-number-random.html">https://www.runoob.com/python/func-number-random.html</a></p>
+<p></p>
+<p></p>
+<h1>WEEK3</h1>
+<h2>1.嘗試利用random.sample的方式抽出組別</h2>
+<p>但是由於對python的不熟悉無法如願的打出有效的指令。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+
+team = ('1', '2', '3', '4', '5', '6', '7')
+
+
+def f1():
+    # 方法一：（假設沒有重複元素）編立集合，將尚未選擇的元素组成新集合。
+    r1 = random.sample(team, 3)
+    r2 = []
+    for item in team:
+        if item not in r1:
+            r2.append(item)
+    print('result1: %s' % random.sample(r2, 2))
+
+
+def f2():
+    # 方法二：（假設沒有重複元素）使用集合 set，計算差集。
+    r1 = random.sample(team, 3)
+    r2 = tuple(set(team) - set(r1))
+    print('result2: %s' % random.sample(r2, 2))
+
+
+def f3():
+    # 方法三：（假設沒有重複元素）隨機選擇集合元素的下標，而不是元素值。
+    index_r1 = random.sample(range(len(team)), 3)
+    # r1 = [team[i] for i in index_r1]
+    remain_index = tuple(set(range(len(team))) - set(index_r1))
+    index_r2 = random.sample(remain_index, 2)
+    r2 = [team[i] for i in index_r2]
+    print('result3: %s' % r2)</pre>
+<p></p>
+<p>參考<a href="https://segmentfault.com/q/1010000014061245">https://segmentfault.com/q/1010000014061245</a></p>
+<h2>2.利用random.shffle的方式洗出組別</h2>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import random
+#這邊我們從http://s1.mde.nfu.edu.tw:8000/?semester=1082&amp;courseno=0767 抓取資料
+groupList=[['40723104', '40723107', '40723114', '40723115', '40723118', '40723122', '40723123', '40723140', '40723149', '40723151', '40723153', '40723154', '40723155', '40623143', '40723108', '40723127', '40723132', '40723133', '40723137', '40723141', '40723143', '40723144', '40723147', '40723148', '40723150', '40723103', '40723110', '40723112', '40723120', '40723125', '40723126', '40723128', '40723130', '40723139', '40723142', '40723145', '40723146', '40423155', '40723101', '40723102', '40723106', '40723111', '40723119', '40723121', '40723124', '40723134', '40723135', '40723136', '40723138']]
+ #設定變數0
+group=groupList[0]
+#將group數列隨機排列
+random.shuffle(group)
+#列印數列
+print(group)
+#列印數列(1~12)
+print(group[0:12])
+#列印數列(13~24)
+print(group[12:24])
+#列印數列(25~36)
+print(group[24:36])
+#列印數列(37~49)
+print(group[36:49])</pre>
+<p>詳見第二組組員<a href="https://s40723147.github.io/cd2020/content/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.html">https://s40723147.github.io/cd2020/content/%E4%BA%82%E6%95%B8%E5%88%86%E7%B5%84.html</a><br/><br/></p>
+<p>補充說明</p>
+<h3>shuffle(洗牌)</h3>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+number_list = [7,14,21,28,35,42,49,56,63,70]
+
+print("原始列表：",number_list)
+
+random.shuffle(number_list) #shuffle方法
+
+print("第一次洗牌之後的列表：",number_list)
+
+random.shuffle(number_list)
+
+print("第二次洗牌之後列出：",number_list)
+
+原始列表： [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+
+first shuffle：之後的列表： [35, 28, 70, 14, 21, 63, 7, 49, 42, 56]
+
+第二次洗牌之後列出： [21, 7, 70, 28, 56, 14, 63, 42, 35, 49]
+
+
+
+原文網址：https://kknews.cc/code/z9vx6zg.html</pre>
+<p>我們可以從這了解到shuffle是一個將數列重新排列的方式</p>
+<p>接著我們利用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#列印數列
+print(group)
+#列印數列(1~12)
+print(group[0:12])
+#列印數列(13~24)
+print(group[12:24])
+#列印數列(25~36)
+print(group[24:36])
+#列印數列(37~49)
+print(group[36:49])</pre>
+<p>的方式可以以不重複的方法分出4組組員</p>
+<h3>變數</h3>
+<p class="blockParagraph-544a408c" data-key="75ae231ffcb6457b9b830f6930d848b9"><span class="text-4505230f--TextH400-3033861f--textContentFamily-49a318e1"><span data-key="8ff097147fe541dea143fce03b14fe53"><span data-offset-key="8ff097147fe541dea143fce03b14fe53:0">「變數」在處理資料上是非常重要的元素，它可以用來儲存我們要處理的資料，也可以用來儲存處理之後的資料，等到資料都處理完畢之後，可以隨時取出使用。</span></span></span></p>
+<p class="blockParagraph-544a408c" data-key="b47c43b75d904b4590fcadeddf3c3157" data-slate-fragment="JTdCJTIyb2JqZWN0JTIyJTNBJTIyZG9jdW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJwYXJhZ3JhcGglMjIlMkMlMjJpc1ZvaWQlMjIlM0FmYWxzZSUyQyUyMmRhdGElMjIlM0ElN0IlN0QlMkMlMjJub2RlcyUyMiUzQSU1QiU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJsZWF2ZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJsZWFmJTIyJTJDJTIydGV4dCUyMiUzQSUyMiVFMyU4MCU4QyVFOCVBRSU4QSVFNiU5NSVCOCVFMyU4MCU4RCVFNSU5QyVBOCVFOCU5OSU5NSVFNyU5MCU4NiVFOCVCMyU4NyVFNiU5NiU5OSVFNCVCOCU4QSVFNiU5OCVBRiVFOSU5RCU5RSVFNSVCOCVCOCVFOSU4NyU4RCVFOCVBNiU4MSVFNyU5QSU4NCVFNSU4NSU4MyVFNyVCNCVBMCVFRiVCQyU4QyVFNSVBRSU4MyVFNSU4RiVBRiVFNCVCQiVBNSVFNyU5NCVBOCVFNCVCRSU4NiVFNSU4NCVCMiVFNSVBRCU5OCVFNiU4OCU5MSVFNSU4MCU5MSVFOCVBNiU4MSVFOCU5OSU5NSVFNyU5MCU4NiVFNyU5QSU4NCVFOCVCMyU4NyVFNiU5NiU5OSVFRiVCQyU4QyVFNCVCOSU5RiVFNSU4RiVBRiVFNCVCQiVBNSVFNyU5NCVBOCVFNCVCRSU4NiVFNSU4NCVCMiVFNSVBRCU5OCVFOCU5OSU5NSVFNyU5MCU4NiVFNCVCOSU4QiVFNSVCRSU4QyVFNyU5QSU4NCVFOCVCMyU4NyVFNiU5NiU5OSVFRiVCQyU4QyVFNyVBRCU4OSVFNSU4OCVCMCVFOCVCMyU4NyVFNiU5NiU5OSVFOSU4MyVCRCVFOCU5OSU5NSVFNyU5MCU4NiVFNSVBRSU4QyVFNyU5NSVBMiVFNCVCOSU4QiVFNSVCRSU4QyVFRiVCQyU4QyVFNSU4RiVBRiVFNCVCQiVBNSVFOSU5QSVBOCVFNiU5OSU4MiVFNSU4RiU5NiVFNSU4NyVCQSVFNCVCRCVCRiVFNyU5NCVBOCVFMyU4MCU4MiUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTVEJTdEJTVEJTdEJTVEJTdEJTJDJTdCJTIyb2JqZWN0JTIyJTNBJTIyYmxvY2slMjIlMkMlMjJ0eXBlJTIyJTNBJTIycGFyYWdyYXBoJTIyJTJDJTIyaXNWb2lkJTIyJTNBZmFsc2UlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIybGVhdmVzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybGVhZiUyMiUyQyUyMnRleHQlMjIlM0ElMjIlRTUlODUlQjYlRTUlQUYlQTYlRUYlQkMlOEMlRTglQUUlOEElRTYlOTUlQjglRTUlQjAlQjElRTYlOTglQUYlRTUlOUMlQTglRTklOUIlQkIlRTglODUlQTYlRTglQTglOTglRTYlODYlQjYlRTklQUIlOTQlRTglQTMlQTElRTklOUQlQTIlRTclOUElODQlRTQlQjglODAlRTUlODAlOEIlRTQlQkQlOEQlRTclQkQlQUUlRTclQTklQkElRTklOTYlOTMlRUYlQkMlOEMlRTYlOTclQTklRTYlOUMlOUYlRTclOUElODQlRTklOUIlQkIlRTglODUlQTYlRTYlOTglQUYlRTQlQkIlQTUlRTglQTglOTglRTYlODYlQjYlRTklQUIlOTQlRTclOUElODQlRTQlQkQlOEQlRTclQkQlQUUlRTclQjclQTglRTglOTklOUYlRUYlQkMlODglRTUlQTYlODIlRUYlQkMlOUEwMEEwJTNBRkZFQyVFOSU4MCU5OSVFNiVBOCVBMyVFNSVBRCU5MCVFNyU5QSU4NCVFNSU5RSU4QiVFNSVCQyU4RiVFRiVCQyU4OSVFNCVCRSU4NiVFOCVBMSVBOCVFNyVBNCVCQSVFRiVCQyU4QyVFNCVCRCU4NiVFNiU5OCVBRiVFOSU4MCU5OSVFNCVCQSU5QiVFNiU5NSVCOCVFNSVBRCU5NyVFNSVCMCU4RCVFNCVCQSVCQSVFNCVCRSU4NiVFOCVBQSVBQSVFNiVCMiU5MiVFNiU5QyU4OSVFNiU4NCU4RiVFNyVCRSVBOSVFRiVCQyU4QyVFNiU4OSU4MCVFNCVCQiVBNSVFNSU5QyVBOCVFNyVBOCU4QiVFNSVCQyU4RiVFOCVBQSU5RSVFOCVBOCU4MCVFNCVCOCVBRCVFNiU4OSU4RCVFNiU5QyU4MyVFNCVCQiVBNSVFNCVCOCU4MCVFNCVCQSU5QiVFOCU4QiVCMSVFNiU5NiU4NyVFNSVBRCU5NyVFNSU4NSU4MyVFMyU4MCU4MSVFNiU5NSVCOCVFNSVBRCU5NyVFNSU4NSU4MyVFNCVCQiVBNSVFNSU4RiU4QSVFNCVCOCU4MCVFNCVCQSU5QiVFNyVBQyVBNiVFOCU5OSU5RiVFNCVCRSU4NiVFNCVCQiVBMyVFNiU5QiVCRiVFNiU5RiU5MCVFNCVCQSU5QiVFNCVCRCU4RCVFNyVCRCVBRSVFRiVCQyU4QyVFNCVCQiVBNSVFNiU5NiVCOSVFNCVCRSVCRiVFNiU4OCU5MSVFNSU4MCU5MSVFNSU5QyVBOCVFNyVBOCU4QiVFNSVCQyU4RiVFNCVCOCVBRCVFNCVCRCVCRiVFNyU5NCVBOCVFMyU4MCU4MiUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTVEJTdEJTVEJTdEJTVEJTdEJTVEJTdE"><span class="text-4505230f--TextH400-3033861f--textContentFamily-49a318e1"><span data-key="23e3dec0e2464a6eacc3ecd444cd360c"><span data-offset-key="23e3dec0e2464a6eacc3ecd444cd360c:0">其實，變數就是在電腦記憶體裡面的一個位置空間，早期的電腦是以記憶體的位置編號（如：00A0:FFEC這樣子的型式）來表示，但是這些數字對人來說沒有意義，所以在程式語言中才會以一些英文字元、數字元以及一些符號來代替某些位置，以方便我們在程式中使用。</span></span></span></p>
+<p></p>

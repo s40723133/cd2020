@@ -154,18 +154,42 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">WEEK3 << <a href='WEEK3.html'>Previous</a> <a href='2.利用random.shffle的方式洗出組別.html'>Next</a> >> 2.利用random.shffle的方式洗出組別<br /><h1>1.嘗試利用random.sample的方式抽出組別</h1>
+<p>但是由於對python的不熟悉無法如願的打出有效的指令。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+
+team = ('1', '2', '3', '4', '5', '6', '7')
+
+
+def f1():
+    # 方法一：（假設沒有重複元素）編立集合，將尚未選擇的元素组成新集合。
+    r1 = random.sample(team, 3)
+    r2 = []
+    for item in team:
+        if item not in r1:
+            r2.append(item)
+    print('result1: %s' % random.sample(r2, 2))
+
+
+def f2():
+    # 方法二：（假設沒有重複元素）使用集合 set，計算差集。
+    r1 = random.sample(team, 3)
+    r2 = tuple(set(team) - set(r1))
+    print('result2: %s' % random.sample(r2, 2))
+
+
+def f3():
+    # 方法三：（假設沒有重複元素）隨機選擇集合元素的下標，而不是元素值。
+    index_r1 = random.sample(range(len(team)), 3)
+    # r1 = [team[i] for i in index_r1]
+    remain_index = tuple(set(range(len(team))) - set(index_r1))
+    index_r2 = random.sample(remain_index, 2)
+    r2 = [team[i] for i in index_r2]
+    print('result3: %s' % r2)</pre>
+<p></p>
+<p>參考<a href="https://segmentfault.com/q/1010000014061245">https://segmentfault.com/q/1010000014061245</a></p>
+<br />WEEK3 << <a href='WEEK3.html'>Previous</a> <a href='2.利用random.shffle的方式洗出組別.html'>Next</a> >> 2.利用random.shffle的方式洗出組別</div>
         
     <!-- footer -->
       <div class="container">
