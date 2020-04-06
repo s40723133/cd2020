@@ -13,7 +13,7 @@
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>WEEK2</h1>
+<h1>WEEK3</h1>
 <h4>在這周將python版本更新至3.8.2，並且於直播開會中分出了各個任務的成員</h4>
 <h3>解釋亂數分組之程序</h3>
 <h3>1.random模組的應用</h3>
@@ -21,7 +21,7 @@
 <p>參考資料:<a href="https://www.runoob.com/python/func-number-random.html">https://www.runoob.com/python/func-number-random.html</a></p>
 <p></p>
 <p></p>
-<h1>WEEK3</h1>
+<h1>WEEK4</h1>
 <h2>1.嘗試利用random.sample的方式抽出組別</h2>
 <p>但是由於對python的不熟悉無法如願的打出有效的指令。</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
@@ -118,3 +118,23 @@ print(group[36:49])</pre>
 <p class="blockParagraph-544a408c" data-key="75ae231ffcb6457b9b830f6930d848b9"><span class="text-4505230f--TextH400-3033861f--textContentFamily-49a318e1"><span data-key="8ff097147fe541dea143fce03b14fe53"><span data-offset-key="8ff097147fe541dea143fce03b14fe53:0">「變數」在處理資料上是非常重要的元素，它可以用來儲存我們要處理的資料，也可以用來儲存處理之後的資料，等到資料都處理完畢之後，可以隨時取出使用。</span></span></span></p>
 <p class="blockParagraph-544a408c" data-key="b47c43b75d904b4590fcadeddf3c3157" data-slate-fragment="JTdCJTIyb2JqZWN0JTIyJTNBJTIyZG9jdW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJwYXJhZ3JhcGglMjIlMkMlMjJpc1ZvaWQlMjIlM0FmYWxzZSUyQyUyMmRhdGElMjIlM0ElN0IlN0QlMkMlMjJub2RlcyUyMiUzQSU1QiU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJsZWF2ZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJsZWFmJTIyJTJDJTIydGV4dCUyMiUzQSUyMiVFMyU4MCU4QyVFOCVBRSU4QSVFNiU5NSVCOCVFMyU4MCU4RCVFNSU5QyVBOCVFOCU5OSU5NSVFNyU5MCU4NiVFOCVCMyU4NyVFNiU5NiU5OSVFNCVCOCU4QSVFNiU5OCVBRiVFOSU5RCU5RSVFNSVCOCVCOCVFOSU4NyU4RCVFOCVBNiU4MSVFNyU5QSU4NCVFNSU4NSU4MyVFNyVCNCVBMCVFRiVCQyU4QyVFNSVBRSU4MyVFNSU4RiVBRiVFNCVCQiVBNSVFNyU5NCVBOCVFNCVCRSU4NiVFNSU4NCVCMiVFNSVBRCU5OCVFNiU4OCU5MSVFNSU4MCU5MSVFOCVBNiU4MSVFOCU5OSU5NSVFNyU5MCU4NiVFNyU5QSU4NCVFOCVCMyU4NyVFNiU5NiU5OSVFRiVCQyU4QyVFNCVCOSU5RiVFNSU4RiVBRiVFNCVCQiVBNSVFNyU5NCVBOCVFNCVCRSU4NiVFNSU4NCVCMiVFNSVBRCU5OCVFOCU5OSU5NSVFNyU5MCU4NiVFNCVCOSU4QiVFNSVCRSU4QyVFNyU5QSU4NCVFOCVCMyU4NyVFNiU5NiU5OSVFRiVCQyU4QyVFNyVBRCU4OSVFNSU4OCVCMCVFOCVCMyU4NyVFNiU5NiU5OSVFOSU4MyVCRCVFOCU5OSU5NSVFNyU5MCU4NiVFNSVBRSU4QyVFNyU5NSVBMiVFNCVCOSU4QiVFNSVCRSU4QyVFRiVCQyU4QyVFNSU4RiVBRiVFNCVCQiVBNSVFOSU5QSVBOCVFNiU5OSU4MiVFNSU4RiU5NiVFNSU4NyVCQSVFNCVCRCVCRiVFNyU5NCVBOCVFMyU4MCU4MiUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTVEJTdEJTVEJTdEJTVEJTdEJTJDJTdCJTIyb2JqZWN0JTIyJTNBJTIyYmxvY2slMjIlMkMlMjJ0eXBlJTIyJTNBJTIycGFyYWdyYXBoJTIyJTJDJTIyaXNWb2lkJTIyJTNBZmFsc2UlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIybGVhdmVzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybGVhZiUyMiUyQyUyMnRleHQlMjIlM0ElMjIlRTUlODUlQjYlRTUlQUYlQTYlRUYlQkMlOEMlRTglQUUlOEElRTYlOTUlQjglRTUlQjAlQjElRTYlOTglQUYlRTUlOUMlQTglRTklOUIlQkIlRTglODUlQTYlRTglQTglOTglRTYlODYlQjYlRTklQUIlOTQlRTglQTMlQTElRTklOUQlQTIlRTclOUElODQlRTQlQjglODAlRTUlODAlOEIlRTQlQkQlOEQlRTclQkQlQUUlRTclQTklQkElRTklOTYlOTMlRUYlQkMlOEMlRTYlOTclQTklRTYlOUMlOUYlRTclOUElODQlRTklOUIlQkIlRTglODUlQTYlRTYlOTglQUYlRTQlQkIlQTUlRTglQTglOTglRTYlODYlQjYlRTklQUIlOTQlRTclOUElODQlRTQlQkQlOEQlRTclQkQlQUUlRTclQjclQTglRTglOTklOUYlRUYlQkMlODglRTUlQTYlODIlRUYlQkMlOUEwMEEwJTNBRkZFQyVFOSU4MCU5OSVFNiVBOCVBMyVFNSVBRCU5MCVFNyU5QSU4NCVFNSU5RSU4QiVFNSVCQyU4RiVFRiVCQyU4OSVFNCVCRSU4NiVFOCVBMSVBOCVFNyVBNCVCQSVFRiVCQyU4QyVFNCVCRCU4NiVFNiU5OCVBRiVFOSU4MCU5OSVFNCVCQSU5QiVFNiU5NSVCOCVFNSVBRCU5NyVFNSVCMCU4RCVFNCVCQSVCQSVFNCVCRSU4NiVFOCVBQSVBQSVFNiVCMiU5MiVFNiU5QyU4OSVFNiU4NCU4RiVFNyVCRSVBOSVFRiVCQyU4QyVFNiU4OSU4MCVFNCVCQiVBNSVFNSU5QyVBOCVFNyVBOCU4QiVFNSVCQyU4RiVFOCVBQSU5RSVFOCVBOCU4MCVFNCVCOCVBRCVFNiU4OSU4RCVFNiU5QyU4MyVFNCVCQiVBNSVFNCVCOCU4MCVFNCVCQSU5QiVFOCU4QiVCMSVFNiU5NiU4NyVFNSVBRCU5NyVFNSU4NSU4MyVFMyU4MCU4MSVFNiU5NSVCOCVFNSVBRCU5NyVFNSU4NSU4MyVFNCVCQiVBNSVFNSU4RiU4QSVFNCVCOCU4MCVFNCVCQSU5QiVFNyVBQyVBNiVFOCU5OSU5RiVFNCVCRSU4NiVFNCVCQiVBMyVFNiU5QiVCRiVFNiU5RiU5MCVFNCVCQSU5QiVFNCVCRCU4RCVFNyVCRCVBRSVFRiVCQyU4QyVFNCVCQiVBNSVFNiU5NiVCOSVFNCVCRSVCRiVFNiU4OCU5MSVFNSU4MCU5MSVFNSU5QyVBOCVFNyVBOCU4QiVFNSVCQyU4RiVFNCVCOCVBRCVFNCVCRCVCRiVFNyU5NCVBOCVFMyU4MCU4MiUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTVEJTdEJTVEJTdEJTVEJTdEJTVEJTdE"><span class="text-4505230f--TextH400-3033861f--textContentFamily-49a318e1"><span data-key="23e3dec0e2464a6eacc3ecd444cd360c"><span data-offset-key="23e3dec0e2464a6eacc3ecd444cd360c:0">其實，變數就是在電腦記憶體裡面的一個位置空間，早期的電腦是以記憶體的位置編號（如：00A0:FFEC這樣子的型式）來表示，但是這些數字對人來說沒有意義，所以在程式語言中才會以一些英文字元、數字元以及一些符號來代替某些位置，以方便我們在程式中使用。</span></span></span></p>
 <p></p>
+<p><br/><br/><br/></p>
+<h1>WEEK5</h1>
+<p>這周我們分配了翻譯工作</p>
+<p>我是負責翻譯<a class="link" href="https://drive.google.com/file/d/13THamnfayiRT4Wa9KzmjXQSP4ZW2jIej/view" rel="nofollow noopener noreferrer" target="_blank">MechanicalDesignProcess.pdf</a>的一員</p>
+<h2>序章</h2>
+<p>本章介紹了設計如何用於電子產品，<br/>並定義了何謂“成功的設計”。</p>
+<p>我們將討論設計師在設置產品時扮演的角色，其中<br/>設計師需要思考整個產品開發圖，<br/>溝通，以及開始設計時要考慮的初始因素。</p>
+<p>在開始之前，我們先簡單地定義當我們談論一個<br/>“電子產品”時，它代表的是其中裝有電路板的產品，通常具有<br/>一些輸入/輸出設備，例如LCD。電子產品的例子包括<br/>手機、數位相機、超聲波牙刷。</p>
+<p>電子產品外殼是包圍並支撐電路的物件。外殼能讓消費者使用這個產品。外殼<br/>的樣子來自各種原因，但是最必要的是保護電子設備（電路板和<br/>LCD），防止電子設備板從環境或物理顛簸（例如掉落產品）損毀。</p>
+<p>機盒可通過按鍵或按鈕訪問設備的輸入信息<br/>也許，並允許從設備傳輸信息。外殼<br/>提供結構，以便支持和保護電路板邏輯。</p>
+<p>近年來出現的是Apple iPhone 7或HP Spectre筆記本電腦（兩者<br/>都是在2016年的產品）都是已開發出一些非常有效的產品外殼的案例。<br/> <br/> 從本質上講，一種成功的外殼設計將是<br/>設計已符合產品的書面規格（spec），並且能在設定的成本和時間參數內完成。<br/>現在讓我們開始探索-設計這些機箱的過程。</p>
+<p><br/><span></span></p>
+<h2>1-1設計指南</h2>
+<p>本章節在作為成功的設計指南時，以單一參考文獻的形式提供電子產品外殼的機械設計。</p>
+<p>© Springer International Publishing AG, part of Springer Nature 2019 1<br/>T. Serksnis, Designing Electronic Product Enclosures,<br/><a href="https://doi.org/10.1007/978-3-319-69395-8_1">https://doi.org/10.1007/978-3-319-69395-8_1</a></p>
+<p>讓我們分解上面句子中的一些詞以進一步定義何謂成功</p>
+<h3>設計指南</h3>
+<p>本文是一個起點、一個參考點。設計師將使用許多<br/>工作指導；此文本旨在提供一般幫助，並有助於擴大<br/>設計師的經驗以及組織的建立流程。</p>
+<h3>電子產品外殼（EPE =電子產品外殼）</h3>
+<p>電子產品外殼是由內部和外部結構所組成<br/>的要素。它包括用於使用者使用的的任何硬件，</p>
