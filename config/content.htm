@@ -117,6 +117,275 @@ print(group[36:49])</pre>
 <h4>翻譯過程</h4>
 <p>因為影片太長，所以只擷取一小段</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/6aTmxtkG5iw" width="560"></iframe></p>
+<h1>WEEK10~14</h1>
+<p>week10 meeting</p>
+<p><a href="https://drive.google.com/file/d/1Z1Sy1RxOChwe6yRICJ-dkrOe5UQMvveX/view">https://drive.google.com/file/d/1Z1Sy1RxOChwe6yRICJ-dkrOe5UQMvveX/view</a></p>
+<h4>google用戶登陸設置</h4>
+<ol>
+<li><span>登錄到您的@gm帳戶</span></li>
+<li><span>連結到</span><a href="https://console.developers.google.com/"><span>https://console.developers.google.com</span></a></li>
+<li><span>接受許可並創建Google API項目</span></li>
+<li><span>啟用Google +域API</span></li>
+<li><span>在Google + Domain API憑據下，按CONFIGURE CONSENT SCREEN按鈕</span></li>
+<li><span>選擇內部或外部用戶類型並添加新的應用程序名稱</span></li>
+<li><span>在“ API和服務”下，進入“憑據”頁面</span></li>
+<li><span><span _ngcontent-ith-c126="" class="cfc-table-title ng-star-inserted" id="cfc-table-caption-1" role="presentation">為Web應用程序</span>創建“<span> </span></span><span _ngcontent-ith-c126="" class="cfc-table-title ng-star-inserted" id="cfc-table-caption-1" role="presentation"><span>OAuth 2.0客戶端ID”類型的憑據</span></span></li>
+<li><span>授權的JavaScript來源：</span><a href="https://localhost:8443/"><span>https：// localhost：8443</span></a></li>
+<li><span>授權的重定向URI：</span><a href="https://localhost:8443/login/google/"><span>https：// localhost：8443 / login / google /</span></a></li>
+<li><span>將您的客戶ID和客戶機密保存到oauth_gm.txt中</span><span></span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YBqo96lU0Gk" width="560"></iframe></li>
+</ol>
+<h1>CoppeliaSlim</h1>
+<div class="col-sm-7 p-4">
+<p><span></span></p>
+<img alt="" height="167" src="/images/CoppeliaSim.png" width="600"/>
+<p><span>CoppeliaSim用於快速算法開發，工廠自動化仿真，快速原型製作和驗證，機器人技術相關的教育，遠程監控，安全性雙重檢查以及數字孿生等。</span></p>
+</div>
+<p></p>
+<h3>BubbleRob教程</h3>
+<p><span>本教程將在設計簡單的移動機器人</span><em><span>BubbleRob</span></em><span>時嘗試介紹很多CoppeliaSim功能</span><span>。下圖說明了我們將設計的仿真場景：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut1.jpg"/></p>
+<p></p>
+<p><span>由於本教程將跨越許多不同的方面，因此也請看看</span><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm"><span>其他教程</span></a><span>，主要是</span><a href="https://www.coppeliarobotics.com/helpFiles/en/buildingAModelTutorial.htm"><span>有關構建仿真模型</span></a><span>的<a href="https://www.coppeliarobotics.com/helpFiles/en/buildingAModelTutorial.htm">教程</a>。首先，重新啟動CoppeliaSim。模擬器顯示默認</span><a href="https://www.coppeliarobotics.com/helpFiles/en/scenes.htm"><span>場景</span></a><span>。我們將從</span><em><span>BubbleRob</span></em><span>的主體開始。</span></p>
+<p><span>我們使用[菜單欄-&gt;添加-&gt;基本形狀-&gt;球體]向場景中添加直徑為0.2的基本球體。我們將</span><strong><span>X尺寸</span></strong><span>項目調整為<strong>0.2</strong>，然後點擊</span><strong><span>確定</span></strong><span>。默認情況下，創建的球體將顯示在可見層</span><span>1中，並且是動態且可響應</span><span>的</span><span>（因為我們已啟用“<span> </span></span><strong><span>創建動態且可響應的形狀</span></strong><span><span> </span>”項）。這代表</span><em><span>BubbleRob的</span></em><span>身體會掉落，並且能夠對與其他可響應形狀的碰撞做出反應（由物理引擎模擬）。我們可以看到這是形狀動力學</span><span>：項目</span><strong><span>身體是可響應的</span></strong><span>，</span><strong><span>身體是動態的</span></strong><span>已啟用。我們開始仿真（通過工具欄按鈕，或在場景窗口中按&lt;control-space&gt;），然後復制並黏貼創建的球體（使用[菜單欄-&gt;編輯-&gt;複製所選對象]，然後[菜單欄-&gt;編輯-&gt;粘貼緩衝區]，或先按&lt;control-c&gt;，再按&lt;control-v&gt;）：這兩個球將對碰撞做出反應並滾動。我們停止模擬：重複的球體將自動刪除。可以在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><span>模擬對話框中</span></a><span>修改此默認行為。</span></p>
+<p><span>我們還希望</span><em><span>BubbleRob的</span></em><span>主體可以被其他計算模塊（例如</span><a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm"><span>最小距離計算模塊</span></a><span>）使用。因此，如果尚未啟用，則在該形狀的<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象公共屬性中</a>啟用</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span>Collidable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>Measurable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span>Renderable</span></a></strong><span>和</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span>Detectable</span></a></strong><span>。如果需要，我們現在還可以在<a href="https://www.coppeliarobotics.com/helpFiles/en/shapeProperties.htm">形狀屬性中</a>更改球體的視覺外觀。</span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeProperties.htm"><span></span></a><span></span></p>
+<p><span>現在，我們在“<span> </span><strong>平移”</strong>選項卡上打開“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span>位置”對話框</span></a><span>，選擇代表<em>BubbleRob</em>身體的球體，然後為“<span> </span><strong>沿Z”</strong>輸入0.02<span> </span>。我們確保將<strong>相對</strong>項設置為<strong>World</strong>。然後，單擊<strong>翻譯選擇</strong>。這會將所有選定對象沿絕對Z軸平移2 cm，並有效地將我們的球體抬高了一點。在<a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">場景層次結構中</a>，我們雙擊球體的名稱，以便我們可以編輯其名稱。我們輸入<em>bubbleRob</em>，然後按Enter。</span><strong><span></span></strong><span></span><em><span></span></em><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span></span></a><span></span><em><span></span></em><span></span></p>
+<p><span>接下來，我們將添加一個</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensors.htm"><span>接近傳感器，</span></a><span>以便</span><em><span>BubbleRob</span></em><span>知道它何時接近障礙物：我們選擇[菜單欄-&gt;添加-&gt;接近傳感器-&gt;圓錐類型]。在<strong>方向</strong>選項卡上的</span><a href="https://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm"><span>方向對話框中</span></a><span>，我們為<strong>Y周圍</strong>和<strong>Z<span> </span></strong><strong>周圍</strong>輸入90<span> </span>，然後單擊<strong>旋轉選擇</strong>。在<a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm">位置對話框</a>的“<span> </span><strong>位置”</strong>選項卡上，為<strong>X坐標</strong>輸入0.1<span> </span><strong>。</strong><strong>Z坐標</strong>為0.12<span> </span><strong>。</strong>現在，接近傳感器已相對於<em>BubbleRob的</em>身體正確定位。我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">場景層次中</a>雙擊接近傳感器的圖標</span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span></span></a><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span></span></a><span>打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorPropertiesDialog.htm"><span>其屬性</span></a><span>對話框。我們單擊</span><strong><span>顯示體積參數</span></strong><span>以打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorVolumeDialog.htm"><span>接近傳感器體積對話框</span></a><span>。我們將</span><strong><span>偏移量</span></strong><span>調整為0.005，</span><strong><span>角度</span></strong><span>調整為30，</span><strong><span>範圍調整</span></strong><span>為0.15。然後，在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorPropertiesDialog.htm"><span>接近傳感器屬性中</span></a><span>，單擊</span><strong><span>顯示檢測參數</span></strong><span>。這將打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorDetectionParameterDialog.htm"><span>接近傳感器檢測參數對話框</span></a><span>。</span><strong><span>如果距離小於</span></strong><span>則取消選中<strong>“不允許檢測”</strong>項，然後再次關閉該對話框。在場景層次中，我們雙擊接近傳感器的名稱，以便我們可以編輯其名稱。我們輸入</span><em><span>bubbleRob_sensingNose</span></em><span>並按回車鍵。</span></p>
+<p><span>我們選擇</span><em><span>bubbleRob_sensingNose</span></em><span>，然後<em>按住</em><span> </span>Control鍵選擇</span><em><span>bubbleRob</span></em><span>，然後單擊[菜單欄-&gt;編輯-&gt;將最後一個選定的對象設為父對象]。這會將傳感器連接到機器人的身體。我們也可以拖</span><em><span>bubbleRob_sensingNose</span></em><span>到</span><em><span>bubbleRob</span></em><span>在場景層次。這就是我們現在擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut2.jpg"/></p>
+<p class="imageLabel"><span>[接近傳感器連接到</span><em><span>bubbleRob的</span></em><span>身體]</span></p>
+<p></p>
+<p><span>接下來，我們將照顧</span><em><span>BubbleBub的</span></em><span>車輪。我們使用[菜單欄-&gt;文件-&gt;新場景]創建一個新場景。通常情況下，跨多個場景工作非常方便，以便可視化並僅對特定元素進行工作。我們添加一個尺寸為（0.08,0.08,0.02）的純原始圓柱體。至於</span><em><span>BubbleRob</span></em><span>的主體，如果尚未啟用，則在該圓柱的<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象公共屬性中</a>啟用<span> </span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span>Collidable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>Measurable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span>Renderable</span></a></strong><span>和</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span>Detectable</span></a></strong><span>。然後，將圓柱的絕對位置設置為（0.05,0.1,0.04），並將其絕對方向設置為（-90,0,0）。我們將名稱更改為<em>bubbleRob_leftWheel</em></span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span><em><span></span></em><span>。我們複製並粘貼滾輪，然後將復制的絕對Y坐標設置為-0.1。我們將副本重命名為</span><em><span>bubbleRob_rightWheel</span></em><span>。我們選擇兩個輪子，複製它們，然後切換回場景1，然後粘貼輪子。</span></p>
+<p><span>現在，我們需要為車輪添加</span><a href="https://www.coppeliarobotics.com/helpFiles/en/joints.htm"><span>接頭</span></a><span>（或電動機）。我們單擊[菜單欄-&gt;添加-&gt;關節-&gt;旋轉]將旋轉關節添加到場景。在大多數情況下，將新對象添加到場景時，該對象將出現在世界的起源處。我們保持關節處於選中狀態，然後控制選擇</span><em><span>bubbleRob_leftWheel</span></em><span>。在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span>位置對話框</span></a><span>的“<span> </span></span><strong><span>位置”</span></strong><span>選項卡上，我們單擊“<span> </span></span><strong><span>應用於”選擇</span></strong><span>按鈕：這將關節定位在左輪的中心。然後，在“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm"><span>方向”對話框</span></a><span>的“<span> </span></span><strong><span>方向”</span></strong><span>選項卡上，執行相同的操作：這將關節與左輪<strong>定向的方向</strong>相同。我們將關節重命名為</span><em><span>bubbleRob_leftMotor</span></em><span>。現在，我們在場景層次中雙擊關節的圖標以打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/jointProperties.htm"><span>關節屬性</span></a><span>對話框。然後，單擊“<span> </span></span><strong><span>顯示動態參數”</span></strong><span>以打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/jointDynamicsProperties.htm"><span>關節動力學屬性</span></a><span>對話框。我們</span><strong><span>啟用電動機</span></strong><span>，並選中項目“<span> </span></span><strong><span>目標速度為零時鎖定電動機”</span></strong><span>。現在，我們對右馬達重複相同的過程，並將其重命名為</span><em><span>bubbleRob_rightMotor</span></em><span>。現在，我們將左輪連接到左馬達，將右輪連接到右馬達，然後將兩個馬達連接到</span><em><span>bubbleRob</span></em><span>。這就是我們所擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut3.jpg"/></p>
+<p class="imageLabel"><span>[接近傳感器，電動機和車輪]</span></p>
+<p></p>
+<p><span>我們運行模擬，並註意到機器人向後倒下。我們仍然缺少與地板的第三個聯繫點。現在，我們添加一個小的滑塊（或腳輪）。在一個新場景中，我們添加一個直徑為0.05的純原始球體，並將其設置為</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span>Collidable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>Measurable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span>Renderable</span></a></strong><span>和</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span>Detectable</span></a></strong><span>（如果尚未啟用），然後將其重命名為</span><em><span>bubbleRob_slider</span></em><span>。我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm">形狀動力學屬性</a>中將</span><strong><span>Material</span></strong><span>設置為</span><em><span>noFrictionMaterial</span></em><span>。為了將滑塊與機器人的其餘部分牢固地鏈接在一起，我們使用[菜單欄-&gt;添加-&gt;力傳感器]<span> </span>添加了<a href="https://www.coppeliarobotics.com/helpFiles/en/forceSensors.htm">力傳感器對象</a>。我們將其重命名為</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span></span></a><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/forceSensors.htm"><span></span></a><span></span><em><span>bubbleRob_connection</span></em><span>並將其上移0.05。我們將滑塊連接到力傳感器，然後復制兩個對象，切換回場景1並粘貼它們。然後，我們將力傳感器沿絕對X軸移動-0.07，然後將其安裝到機器人主體上。如果現在運行仿真，我們會注意到滑塊相對於機器人主體略微移動：這是因為兩個對象（即</span><em><span>bubbleRob_slider</span></em><span>和</span><em><span>bubbleRob</span></em><span>）都相互碰撞。為了避免在動力學模擬過程中產生奇怪的影響，我們必須通知CoppeliaSim兩個對像不會相互碰撞，我們可以通過以下方式進行此操作：在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span>shape dynamics屬性中</span></a><span>，為</span><em><span>bubbleRob_slider</span></em><span>設置了</span><strong><span>本地可響應蒙版</span></strong><span>設置為00001111，對於</span><em><span>bubbleRob</span></em><span>，我們將</span><strong><span>本地可響應掩碼</span></strong><span>設置為11110000。如果再次運行仿真，我們會注意到兩個對像不再乾涉。這就是我們現在擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut4.jpg"/></p>
+<p class="imageLabel"><span>[接近傳感器，電機，車輪和滑塊]</span></p>
+<p></p>
+<p><span>我們再次運行仿真，發現即使在電機鎖定的情況下，</span><em><span>BubbleRob也會</span></em><span>輕微移動。我們還嘗試使用不同的物理引擎運行仿真：結果將有所不同。動態仿真的穩定性與所涉及的非靜態形狀的質量和慣性緊密相關。有關此效果的說明，請務必仔細閱讀</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#masses"><span>本</span></a><span>節和</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#inertias"><span>該</span></a><span>節。現在，我們嘗試糾正這種不良影響。我們選擇兩個輪子和滑塊，然後在“形狀動力學”對話框中單擊3次</span><strong><span>M = M * 2（用於選擇）</span></strong><span>。結果是所有選定形狀的質量都將乘以8。我們對3個選定形狀的慣性進行相同的操作，然後再次運行仿真：穩定性得到了改善。在關節動力學對話框中，我們將兩個電機的</span><strong><span>目標速度</span></strong><span>都設置為50。我們運行模擬：</span><em><span>BubbleRob</span></em><span>現在向前移動並最終掉下地面。我們將兩個電機的</span><strong><span>目標速度</span></strong><span>項都重置為零。</span></p>
+<p><span>對象</span><em><span>bubbleRob</span></em><span>是所有以後將形成<em>BubbleRob<span> </span></em><a href="https://www.coppeliarobotics.com/helpFiles/en/models.htm">模型的</a></span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm"><span>對象</span></a><span>的基礎。我們將在稍後定義模型。同時，我們要定義代表<em>BubbleRob</em>的對象的集合。為此，我們定義了一個<a href="https://www.coppeliarobotics.com/helpFiles/en/collections.htm">集合對象</a>。我們單擊[菜單欄-&gt;工具-&gt;集合]以打開<a href="https://www.coppeliarobotics.com/helpFiles/en/collectionsDialog.htm">集合對話框</a>。或者，我們也可以通過單擊相應的工具欄按鈕來打開對話框：</span><em><span></span></em><a href="https://www.coppeliarobotics.com/helpFiles/en/models.htm"><span></span></a><span></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/collections.htm"><span></span></a><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/collectionsDialog.htm"><span></span></a><span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/collectionDialog1.jpg"/></p>
+<p></p>
+<p><span>在集合對話框中，點擊</span><strong><span>添加新集合</span></strong><span>。一個新的集合對像出現在下面的列表中。目前，新添加的集合仍為空（未定義）。在列表中選擇了新的收藏項目後，在場景層次中選擇</span><em><span>bubbleRob</span></em><span>，然後在收藏對話框中單擊“<span> </span></span><strong><span>添加</span></strong><span><span> </span>”。現在，我們的集合被定義為包含層次結構樹的所有對象（從</span><em><span>bubbleRob</span></em><span>對<em>像</em>開始）（集合的組成顯示在“<span> </span></span><strong><span>組成元素和屬性”</span></strong><span>部分）。要編輯集合名稱，請雙擊它，並將其重命名為</span><em><span>bubbleRob_collection</span></em><span>。我們關閉收集對話框。</span></p>
+<p><span>在此階段，我們希望能夠跟踪BubbleRob與任何其他對象之間的最小距離。為此，我們使用[菜單欄-&gt;工具-&gt;計算模塊屬性]<span> </span>打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm"><span>距離對話框</span></a><span>。或者，我們也可以使用相應的工具欄按鈕打開計算模塊屬性對話框：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/calculationModuleButton.jpg"/></p>
+<p></p>
+<p><span>在距離對話框中，單擊</span><strong><span>添加新的距離對象，</span></strong><span>然後選擇一個距離對：</span><em><span>[collection] bubbleRob_collection-場景中的所有其他可測量對象</span></em><span>。這只是添加了一個距離對象，該對象將測量集合</span><em><span>bubbleRob_collection</span></em><span>（即該集合中的任何</span><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>可測量對象</span></a><span>）與場景中任何其他可測量對象之間的最小距離。我們通過雙擊其名稱將距離對象重命名為</span><em><span>bubbleRob_distance</span></em><span>。我們關閉距離對話框。現在，當我們運行模擬時，我們將看不到任何區別，因為距離對象將嘗試測量（並顯示）<em>BubbleRob</em>之間的最小距離段</span><em><span></span></em><span>以及場景中的其他任何可測量對象。問題在於，在此階段，場景中沒有其他可測量的對象（定義地板的形狀默認情況下已禁用其可測量的屬性）。在本教程的後續階段，我們將為場景添加障礙。</span></p>
+<p><span>接下來，我們將向<em>BubbleRob</em>添加一個</span><a href="https://www.coppeliarobotics.com/helpFiles/en/graphs.htm"><span>圖形對象</span></a><span>，以顯示最小距離以上的距離，同時還顯示<em>BubbleRob</em>隨時間<em>的</em>軌跡。我們單擊[菜單欄-&gt;添加-&gt;圖]並將其重命名為<em>bubbleRob_graph</em>。我們將圖形附加到<em>bubbleRob</em>，並將圖形的絕對坐標設置為（0,0,0.005）。現在，通過在場景層次結構中雙擊其圖標來打開<a href="https://www.coppeliarobotics.com/helpFiles/en/graphPropertiesDialog.htm">圖形屬性</a>對話框。我們取消選中“<span> </span><strong>顯示XYZ平面”</strong>，然後單擊“<span> </span><strong>添加新數據流”以進行記錄，</strong>然後選擇“<span> </span><strong>對象：</strong><strong>數據流類型的</strong><strong>絕對x位置</strong><span> </span>”<span> </span>和“<span> </span><em>bubbleRob_graph”</em></span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/graphPropertiesDialog.htm"><span></span></a><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><em><span></span></em><span>用於</span><strong><span>記錄</span></strong><span>的<strong>對象/項目</strong>。</span><strong><span>數據流記錄列表中</span></strong><span>出現了一個項目。該項目是</span><em><span>bubbleRob_graph的</span></em><span>絕對X坐標的數據流（即，將記錄</span><em><span>bubbleRobGraph的</span></em><span>對象的絕對X位置）。現在，我們還想記錄y和z位置：我們以與上述類似的方式添加這些數據流。現在，我們有3個數據流，分別表示BubbleRob的x，y和z軌跡。我們將添加更多的數據流，使我們能夠跟踪我們的機器人與環境之間的最小距離：我們點擊</span><strong><span>添加新的數據流記錄</span></strong><span>，並選擇</span><strong><span>距離：段長度</span></strong><span>的</span><strong><span>數據流類型</span></strong><span>，並</span><em><span>bubbleRob_distance</span></em><span>用於</span><strong><span>記錄</span></strong><span>的<strong>對象/項目</strong>。在</span><strong><span>數據流記錄列表中</span></strong><span>，我們現在將Data重命名為bubbleRob_x_pos，將Data0重命名為bubbleRob_y_pos，將Data1重命名為bubbleRob_z_pos，將Data2重命名為bubbleRob_obstacle_dist。</span></p>
+<p><span>我們在“<span> </span><strong>數據流”記錄列表中</strong>和“<span> </span><strong>時間圖屬性”</strong>部分中選擇</span><em><span>bubbleRob_x_pos</span></em><span>，取消選中“<span> </span><strong>可見”</strong>。我們對<em>bubbleRob_y_pos</em>和<em>bubbleRob_z_pos</em>都執行相同的<em>操作</em>。這樣，在時間圖中只能看到<em>bubbleRob_obstacle_dist</em>數據流。以下是我們應該擁有的：</span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut5.jpg"/></p>
+<p class="imageLabel"><span>[圖形屬性]</span></p>
+<p></p>
+<p><span>接下來，我們將建立一個顯示</span><em><span>BubbleRob</span></em><span>軌蹟的</span><strong><span>3D曲線</span></strong><span>：單擊<strong>編輯3D曲線</strong>打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/graphCurvePropertiesDialog.htm"><span>XY圖和3D曲線對話框</span></a><span>，然後單擊</span><strong><span>添加新曲線</span></strong><span>。在對話框彈出打開，我們選擇</span><em><span>bubbleRob_x_pos</span></em><span>為</span><strong><span>X-值</span></strong><span>項，</span><em><span>bubbleRob_y_pos</span></em><span>為</span><strong><span>Y值</span></strong><span>項，</span><em><span>bubbleRob_z_pos</span></em><span>的</span><strong><span>Z值</span></strong><span>項目。我們將新添加的曲線從</span><em><span>Curve</span></em><span>重命名為bubbleRob_path。最後，我們檢查“<span> </span></span><strong><span>相對於世界”</span></strong><span>項目並將“<span> </span></span><strong><span>曲線寬度”</span></strong><span>設置為4：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut6.jpg"/></p>
+<p class="imageLabel"><span>[3D曲線屬性]</span></p>
+<p></p>
+<p><span>我們關閉與圖有關的所有對話框。現在我們將一個電機</span><strong><span>目標速度</span></strong><span>設置為50，運行模擬，然後將看到</span><em><span>BubbleRob的</span></em><span>軌跡顯示在場景中。然後，我們停止仿真並將電動機目標速度重置為零。</span></p>
+<p><span>我們添加具有以下尺寸的純原始圓柱體：（0.1，0.1，0.2）。我們希望此圓柱體是靜態的（即不受重力或碰撞的影響），但仍會對非靜態的可響應形狀施加一些碰撞響應。為此，我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm">形狀動力學屬性中</a>禁用“<span> </span></span><strong><span>主體是動態</span></strong><span>的”<span> </span>。我們也希望我們的汽缸是<span> </span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm">可碰撞</a></strong>，<strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm">可衡量的</a></strong>，<strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm">可渲染</a></strong>和<strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm">檢測的</a></strong>。我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象的通用屬性中</a>執行此操作。現在，在仍然選擇圓柱體的情況下，我們單擊對象平移工具欄按鈕：</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span></span></a><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span></span></a></strong><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span></span></a></strong><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span></span></a></strong><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span></span></a></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/objectShiftButton.jpg"/></p>
+<p></p>
+<p><span>現在我們可以拖動場景中的任何點：圓柱體將跟隨運動，同時始終受到約束以保持相同的Z坐標。我們將圓柱複製並粘貼幾次，然後將其移動到</span><em><span>BubbleRob</span></em><span>周圍的<em>位置</em>（從頂部查看場景時執行該操作最方便）。在對象移動期間，按住Shift鍵可以執行較小的移動步驟。按住ctrl鍵可以在與</span><em><span>常規</span></em><span>方向正交的方向上移動。完成後，再次選擇相機平移工具欄按鈕：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/cameraShiftButton.jpg"/></p>
+<p></p>
+<p><span>我們將左馬達的</span><strong><span>目標速度</span></strong><span>設置為50並運行模擬：現在，圖形視圖顯示了到最近障礙物的距離，並且該距離段在場景中也可見。我們停止模擬並將目標速度重置為零。</span></p>
+<p><span>現在，我們需要完成</span><strong><span>BubbleRob</span></strong><span>作為</span><a href="https://www.coppeliarobotics.com/helpFiles/en/models.htm"><span>模型</span></a><span>定義。我們選擇模型庫（即對象</span><em><span>bubbleRob</span></em><span>），然後檢查項目</span><strong><span>Object是模型庫，</span></strong><span>並且</span><strong><span>Object / model可以轉移或接受</span></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span>對象</span></a><span>共有<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">屬性</a>中的<strong>DNA</strong>：現在有一個點畫框，它包圍了模型層次結構中的所有對象。我們選擇了兩個關節，即接近傳感器和圖形，然後啟用項目</span><strong><span>“不顯示為內部模型選擇”</span></strong><span>，然後在同一對話框中單擊“<span> </span></span><strong><span>應用於選擇”</span></strong><span>：模型邊界框現在忽略了兩個關節和接近傳感器。仍在同一對話框中，我們禁用</span><strong><span>相機可見性圖層</span></strong><span>2，並為兩個關節和力傳感器啟用</span><strong><span>攝像機可見性層</span></strong><span><span> </span>10：這有效地隱藏了兩個關節和力傳感器，因為默認情況下禁用第9-16層。我們可以隨時</span><a href="https://www.coppeliarobotics.com/helpFiles/en/layerSelectionDialog.htm"><span>修改整個場景的可見性層</span></a><span>。要完成模型定義，我們選擇視覺傳感器，兩個輪子，滑塊和圖形，然後啟用“<span> </span><strong>選擇模型基礎”</strong>項</span><strong><span></span></strong><span>：如果現在嘗試在場景中的模型中選擇一個對象，則將選擇整個模型，這是一種將整個模型作為單個對象進行處理和操作的便捷方法。此外，這可以防止模型受到意外修改。仍然可以通過在按住Shift的情況下單擊選擇模型對象，或者通常在場景層次中選擇它們，從而在場景中選擇模型中的單個對象。最後，我們將模型樹折疊到場景層次中。這就是我們所擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut7.jpg"/></p>
+<p class="imageLabel"><span>[<span> </span></span><em><span>BubbleRob</span></em><span>模型定義]</span></p>
+<p></p>
+<p><span>接下來，我們將在與<em>BubbleRob</em>接近傳感器相同的位置和方向上添加</span><a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensors.htm"><span>視覺</span></a><span>傳感器。我們再次打開模型層次結構，然後單擊[菜單欄-&gt;添加-&gt;視覺傳感器-&gt;透視類型]，然後將視覺傳感器連接到接近傳感器，並將視覺傳感器的本地位置和方向設置為（0,0,0）。我們還確保視覺傳感器不可見，不是模型邊界框的一部分，並且如果單擊該模型，則會選擇模型。為了自定義視覺傳感器，我們打開<a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensorPropertiesDialog.htm">其屬性</a>對話框。我們將“<span> </span><strong>遠裁剪平面”</strong>項設置為1，將“<span> </span><strong>分辨率x”</strong>和“<span> </span><strong>分辨率y”設置為</strong></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensorPropertiesDialog.htm"><span></span></a><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span><span> </span>項目分別為256和256。我們向場景中添加了一個浮動視圖，然後在新添加的浮動視圖上，右鍵單擊[彈出菜單-&gt;視圖-&gt;將視圖與選定的視覺傳感器關聯]（我們確保視覺傳感器在該過程中被選中）。</span></p>
+<p><span>我們通過單擊[菜單欄-&gt;添加-&gt;關聯的子腳本-&gt;非線程]將非線程子腳本附加到視覺傳感器。我們雙擊場景層次結構中視覺傳感器旁邊出現的小圖標：這將打開我們剛剛添加的子腳本。我們將以下代碼複製並粘貼到</span><a href="https://www.coppeliarobotics.com/helpFiles/en/scriptEditor.htm"><span>腳本編輯器中</span></a><span>，然後將其關閉：</span></p>
+<h2>Building a clean model tutorial(建構純模型)</h2>
+<table class="allEncompassingTable">
+<tbody>
+<tr>
+<td>
+<p></p>
+<p><span>本教程將指導您逐步構建機器人或任何其他項目的清晰仿真模型。為了具有美觀，快速顯示，快速仿真和穩定的仿真模型，這是一個非常重要的主題，也許是最重要的方面。</span></p>
+<p><span>為了說明模型的構建過程，我們將構建以下操縱器：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut1.jpg"/></p>
+<p class="imageLabel"><span>[機械手模型]</span></p>
+<br/><br/>
+<table class="subsectionTable">
+<tbody>
+<tr class="subsectionTd">
+<td class="subsectionTd"><a name="visibleShapes"></a><span>建立可見的形狀</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>在構建新模型時，首先，我們僅處理它的視覺方面：動態方面（其簡化，優化模型的不合理之處），關節，傳感器等將在以後階段進行處理。</span></p>
+<p><span>現在，我們可以使用[菜單欄-&gt;添加-&gt;基本形狀-&gt; ...]在CoppeliaSim中直接創建基本形狀。這樣做時，我們可以選擇創建</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span>純形狀或常規形狀</span></a><span>。純形將針對動態交互進行優化，也可以直接動態啟用（例如，跌落，碰撞，但是可以在以後禁用）。基本形狀將是簡單的網格，對於我們的應用程序，可能沒有足夠的細節或幾何精度。在這種情況下，我們的另一個選擇是從外部應用程序導入網格。</span></p>
+<p><span>從外部應用程序導入CAD數據時，最重要的是確保CAD模型不太重，即不包含太多三角形。此要求很重要，因為重型模型的顯示速度很慢，並且還會減慢以後可能使用的各種計算模塊（例如</span><a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm"><span>最小距離計算</span></a><span>或</span><a href="https://www.coppeliarobotics.com/helpFiles/en/dynamicsModule.htm"><span>動力學</span></a><span>）。以下示例通常是一事無成（即使我們會在後面看到，即使有方法可以簡化CoppeliaSim中的數據）：</span></p>
+<p> </p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut2.jpg"/></p>
+<p class="imageLabel"><span>[複雜的CAD數據（實體和線框）]</span></p>
+<br/>
+<p><span>上面的CAD數據非常重：它包含許多三角形（超過47'000個），如果我們只在空的場景中使用單個三角形的實例，這是可以的。但是大多數時候，您將需要模擬同一機器人的多個實例，連接各種類型的抓手，並可能使這些機器人與其他機器人，設備或環境進行交互。在這種情況下，模擬場景可能很快變得太慢。通常，我們建議對不超過2萬個三角形的機器人進行建模，但是在大多數情況下，5 000至10 000個三角形也可以。記住：在幾乎所有方面，少即是好。</span></p>
+<p><span>是什麼使上述模型如此沉重？首先，包含孔和小細節的模型將需要更多的三角形面才能正確表示。因此，如果可能，請嘗試從原始模型數據中刪除所有的孔，螺釘，物體的內部等。如果您將原始模型數據表示為參數化曲面/對象，則在大多數情況下，選擇項目並刪除它們（例如在Solidworks中）通常很簡單。第二個重要步驟是以有限的精度導出原始數據：大多數CAD應用程序都允許您指定導出的網格的細節級別。當工程圖由大小對象組成時，分幾步導出對象可能也很重要。</span></p>
+<p><span>CoppeliaSim當前支持以下CAD數據格式：</span><a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm"><span>OBJ</span></a><span>，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm"><span>STL</span></a><span>，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm"><span>DXF</span></a><span>，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/importExport.htm"><span>3DS</span></a><span>（僅Windows）和</span><a href="https://www.coppeliarobotics.com/helpFiles/en/colladaPlugin.htm"><span>Collada</span></a><span>。還支持</span><a href="https://www.coppeliarobotics.com/helpFiles/en/urdfPlugin.htm"><span>URDF</span></a><span>，但此處未<a href="https://www.coppeliarobotics.com/helpFiles/en/urdfPlugin.htm">提及</a>，因為它不是基於純網格的文件格式。</span></p>
+<p><span>現在，假設我們已按照上一節中所述應用了所有可能的簡化。導入後，我們可能最終仍然會留下一個過重的網格：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut3.jpg"/></p>
+<p class="imageLabel"><span>[導入的CAD數據]</span></p>
+<br/>
+<p><span>您會注意到整個機器人是作為單個網格導入的。稍後我們將看到如何對其進行適當劃分。還要注意導入的網格的方向錯誤：最好保持其方向不變，直到構建整個模型為止，因為如果在以後的階段中我們要導入與同一機器人相關的其他項目，它們將自動具有相對於原始網格的正確位置/方向。</span></p>
+<p><span>在此階段，我們可以使用多種功能來簡化網格：</span></p>
+<ul>
+<li><strong><span>自動網格劃分：</span></strong><span>允許為未通過公共邊鏈接在一起的所有元素生成新形狀。這並不總是適用於選定的網格，但是總是值得一試的，因為與必須同時處理所有元素相比，處理網格元素可以為我們提供更多的控制權。可以通過[菜單欄-&gt;編輯-&gt;分組/合併-&gt;分割所選形狀]訪問該功能。有時，網格劃分會超出預期。在這種情況下，只需將邏輯上屬於一起的元素（即，具有相同的視覺屬性並且屬於同一鏈接的一部分）合併回一個單一形狀（[菜單欄-&gt;編輯-&gt;分組/合併-&gt;合併選定的形狀]）。</span></li>
+<li><strong><span>提取凸包：</span></strong><span>通過將其轉換為凸包來簡化網格。可以通過[菜單欄-&gt;編輯-&gt;將選擇變形為凸形]來訪問該功能。</span></li>
+<li><strong><span>抽取網格：</span></strong><span>減少網格中包含的三角形數量。可以通過[菜單欄-&gt;編輯-&gt;縮小所選形狀...]訪問該功能。</span></li>
+<li><strong><span>刪除網格的內部：</span></strong><span>允許通過刪除其內部來簡化網格。此功能基於</span><a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensors.htm"><span>視覺傳感器</span></a><span>，根據所選設置可能會或多或少地令人滿意。可以通過[菜單欄-&gt;編輯-&gt;提取選定形狀的內部]訪問該功能。</span></li>
+</ul>
+<p><span>沒有/可以應用上述功能的預定義順序（列表中的第一項除外，應始終首先嘗試該項），它在很大程度上取決於我們要簡化的網格的幾何形狀。下圖說明了應用於導入的網格的上述功能（假設列表中的第一項對我們不起作用）：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut4.jpg"/></p>
+<p class="imageLabel"><span>[凸包，抽取網格並在內部提取]</span></p>
+<br/>
+<p><span>請注意，凸包在現階段如何對我們沒有幫助。我們決定首先使用網格抽取功能，然後運行兩次該功能，以將三角形的數量總共除以50。完成後，我們提取簡化形狀的內部並將其丟棄。我們最終得到的網格總共包含2'660個三角形（原始導入的網格包含了136'000個三角形！）。形狀包含的三角形/頂點的數量可以在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/geometryDialog.htm"><span>形狀幾何對話框中</span></a><span>看到。對於整個機器人模型，2'660三角形是極少的三角形，因此視覺外觀可能會因此受到影響。</span></p>
+<p><span>在這一階段，我們可以開始將機器人劃分為單獨的鏈接（請記住，我們目前整個機器人只有一個形狀）。您可以通過兩種不同的方式執行此操作：</span></p>
+<ul>
+<li><strong><span>自動網格劃分：</span></strong><span>此功能已在上一節中進行了描述，它將檢查形狀並為未通過公共邊鏈接在一起的所有元素生成新形狀。這並不總是可行，但總是值得嘗試的。可以通過[菜單欄-&gt;編輯-&gt;分組/合併-&gt;分割所選形狀]訪問該功能。</span></li>
+<li><strong><span>手動網格劃分：</span></strong><span>通過</span><a href="https://www.coppeliarobotics.com/helpFiles/en/triangleEditMode.htm"><span>三角形編輯模式</span></a><span>，您可以手動選擇邏輯上不屬於邏輯的三角形，然後單擊“<span> </span></span><strong><span>提取形狀”</span></strong><span>。這將在場景中生成新形狀。完成該操作後，刪除選定的三角形。</span></li>
+</ul>
+<p><span>對於我們的網格，方法1可以正常工作：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut5.jpg"/></p>
+<p class="imageLabel"><span>[網格劃分]</span></p>
+<br/>
+<p><span>現在，我們可以進一步細化/簡化單個形狀。有時，如果改用凸包，形狀可能會看起來更好。有時，您將不得不反複使用上述幾種技術，以獲得所需的結果。以以下網格為例：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut6.jpg"/></p>
+<p class="imageLabel"><span>[進口網]</span></p>
+<br/>
+<p><span>上面形狀的問題是，由於其中包含孔，我們無法很好地簡化它。因此，我們必須通過</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeEditModes.htm"><span>形狀編輯模式</span></a><span>採用更複雜的方法，在該<a href="https://www.coppeliarobotics.com/helpFiles/en/shapeEditModes.htm">模式下</a>，我們可以提取邏輯上屬於同一凸形子實體的單個元素。此過程可能需要進行多次迭代：我們首先提取3個近似凸元素。現在，我們忽略作為兩個孔的一部分的三角形。在形狀編輯模式下編輯形狀時，可以方便地切換</span><a href="https://www.coppeliarobotics.com/helpFiles/en/layerSelectionDialog.htm"><span>可見性圖層</span></a><span>，以查看其他場景項所覆蓋的內容。</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut7.jpg"/></p>
+<p class="imageLabel"><span>[步驟1]</span></p>
+<br/>
+<p><span>我們最終得到三個形狀的總和，但是其中兩個將需要進一步改進。現在我們可以擦除作為孔的一部分的三角形。最後，我們分別提取3種形狀的凸包，然後將其與[菜單欄-&gt;編輯-&gt;分組/合併-&gt;合併所選形狀]合併在一起：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut8.jpg"/></p>
+<p class="imageLabel"><span>[第2步]</span></p>
+<br/>
+<p><span>在CoppeliaSim中，我們可以啟用/禁用每種形狀的邊緣顯示。我們還可以指定邊緣顯示時要考慮的角度。相似的參數是</span><strong><span>陰影角</span></strong><span>，它指示形狀將在多方面顯示。這些參數以及其他一些參數（例如形狀</span><strong><span>顏色</span></strong><span>）可以在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><span>形狀屬性中</span></a><span>進行調整。請記住，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span>形狀有多種口味</span></a><span>。到目前為止，在本教程中，我們僅涉及簡單形狀：簡單形狀具有一組視覺屬性（即，一種顏色，一個陰影角度等）。如果合併兩個形狀，則結果將是一個簡單的形狀。您還可以對形狀進行分組，在這種情況下，每個形狀將保留其視覺屬性。</span></p>
+<p><span>在下一步中，我們可以合併邏輯上屬於一起的元素（如果它們屬於同一剛性元素，並且具有相同的視覺屬性）。然後，我們更改各種元素的視覺屬性。調整具有不同顏色和視覺屬性的幾種形狀的最簡便方法，如果我們使用特定的字符串來命名顏色，則以後可以輕鬆地以編程方式更改該顏色，即使該形狀是複合形狀的一部分。然後，我們選擇所有具有相同視覺屬性的形狀，然後控制選擇已調整的形狀，然後單擊“<span> </span></span><strong><span>應用於選擇”</span></strong><span>，一次是“<span> </span></span><strong><span>顏色”</span></strong><span>，一次是</span><strong><span>其他屬性</span></strong><span>，在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeProperties.htm"><span>形狀屬性中</span></a><span>：這會將所有視覺屬性轉移到選定的形狀（如果提供的話，包括顏色名稱）。我們最終得到17個單獨的形狀：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut9.jpg"/></p>
+<p class="imageLabel"><span>[調整後的視覺屬性]</span></p>
+<br/>
+<p><span>現在，我們可以使用[菜單欄-&gt;編輯-&gt;分組/合併-&gt;分組所選形狀]對屬於同一鏈接的形狀進行分組。我們最終得到7個形狀：機器人的基礎（或機器人的層次結構樹的基礎）和6個移動鏈接。正確命名對像也很重要：您可以通過雙擊</span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span>場景層次結構中</span></a><span>的對象名稱來做到這一點。基礎應該始終是機器人或模型名稱，其他對象應始終包含基礎對象名稱，例如：</span><em><span>robot</span></em><span>（base），</span><em><span>robot_link1</span></em><span>，</span><em><span>robot_proximitySensor</span></em><span>等。通過默認，形狀將分配給可見性層1，但是可以可以更改</span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span>對象的通用屬性</span></a><span>。默認情況下，僅</span><a href="https://www.coppeliarobotics.com/helpFiles/en/layerSelectionDialog.htm"><span>場景的可見性層1-8被激活</span></a><span>。現在，我們有以下內容（模型</span><em><span>ResizableFloor_5_25</span></em><span>在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/modelDialog.htm"><span>模型屬性對話框中</span></a><span>暫時不可見）：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut10.jpg"/></p>
+<p class="imageLabel"><span>[構成機器人的各個要素]</span></p>
+<br/>
+<p><span>創建或修改形狀時，CoppeliaSim將自動設置其參考框架的位置和方向。形狀的參考框架將始終位於形狀的幾何中心。將選擇框架方向，以便形狀的邊界框保持盡可能小。這並不總是看起來不錯，但是我們隨時可以隨時調整形狀的參考框架的方向。現在，我們可以使用[菜單欄-&gt;編輯-&gt;重定向邊界框-&gt;使用世界參考框架]重新調整所有已創建形狀的參考框架。您可以在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/geometryDialog.htm"><span>形狀幾何對話框中</span></a><span>有更多選項來重新定向參考系。</span></p>
+<br/><br/>
+<table class="subsectionTable">
+<tbody>
+<tr class="subsectionTd">
+<td class="subsectionTd"><a name="joints"></a><span>建立關節</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>現在，我們將照顧關節/馬達。大多數時候，我們知道每個關節的確切位置和方向。在這種情況下，我們只需使用[菜單欄-&gt;添加-&gt;關節-&gt; ...]添加關節，然後可以通過</span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span>位置對話框</span></a><span>和</span><a href="https://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm"><span>方向對話框</span></a><span>更改它們的位置和方向。在其他情況下，我們只有Denavit-Hartenberg（即DH）參數。在這種情況下，我們可以通過<em>Models / tools / Denavit-Hartenberg聯合creator.ttm中</em>的工具模型來構建關節。</span><em><span></span></em><span>，在模型瀏覽器中。有時，我們沒有關於關節位置和方向的信息。然後，我們需要從導入的網格中提取它們。讓我們假設這是我們的情況。無需處理修改過的，更近似的網格，而是打開一個新場景，然後再次導入原始CAD數據。大多數時候，我們可以從原始網格中提取網格或基本形狀。第一步是細分原始網格。如果這不起作用，我們通過</span><a href="https://www.coppeliarobotics.com/helpFiles/en/triangleEditMode.htm"><span>三角形編輯模式進行</span></a><span>。假設我們可以劃分原始網格。現在，我們可以檢查較小的對象。我們正在尋找旋轉形狀，可以用作在其位置以相同方向創建關節的參考。首先，刪除所有不需要的對象。有時在多個打開的場景中工作也很有用，以便於可視化/操作。在我們的案例中，我們首先關注機器人的基座：它包含一個圓柱體，該圓柱體的第一個關節的位置正確。在三角形編輯模式下，我們有：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut11.jpg"/></p>
+<p class="imageLabel"><span>[機器人基礎：法線和三角形編輯模式可視化]</span></p>
+<br/>
+<p><span>我們通過</span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#toolbars"><span>頁面選擇器</span></a><span> </span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#toolbars"><span>工具欄按鈕</span></a><span>更改相機視圖，以便從側面查看對象。所述</span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#toolbars"><span>擬合到視圖工具欄按鈕</span></a><span>可以派上用場正確幀在版的對象。然後，我們切換到</span><a href="https://www.coppeliarobotics.com/helpFiles/en/vertexEditMode.htm"><span>頂點編輯模式，</span></a><span>並選擇屬於上光盤的所有頂點。請記住，通過打開/關閉某些</span><a href="https://www.coppeliarobotics.com/helpFiles/en/layerSelectionDialog.htm"><span>層</span></a><span>，我們可以隱藏場景中的其他對象。然後我們切換回三角形編輯模式：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut12.jpg"/></p>
+<p class="imageLabel"><span>[選擇的上光盤，頂點編輯模式（1和2），三角形編輯模式（3）]</span></p>
+<br/>
+<p><span>現在我們單擊“<span> </span></span><strong><span>提取圓柱體”</span></strong><span>（在這種情況下，“<span> </span></span><strong><span>提取形狀”</span></strong><span>也將起作用），這只是根據選定的三角形在場景中創建了圓柱體形狀。我們離開編輯模式，放棄更改。現在，通過[菜單欄-&gt;添加-&gt;關節-&gt;旋轉]添加旋轉關節，使其保持選中狀態，然後控制選擇提取的圓柱形狀。在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span>位置對話框</span></a><span>的“<span> </span></span><strong><span>位置”</span></strong><span>選項卡上，單擊“<span> </span></span><strong><span>應用於選擇”</span></strong><span>：這基本上將圓柱體的x / y / z位置複製到關節。現在兩個位置都相同。在“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm"><span>方向”對話框</span></a><span>的“<span> </span></span><strong><span>方向”</span></strong><span>選項卡上，我們還單擊“<span> </span></span><strong><span>應用於選擇”</span></strong><span>：現在，所選對象的方向也相同。有時，我們將需要圍繞其自身的參考框架額外旋轉關節90/180度，以獲得正確的方向或旋轉方向。如果需要，我們可以在該對話框的“<span> </span></span><strong><span>旋轉”</span></strong><span>選項卡上執行此操作（在這種情況下，請不要忘記單擊“<span> </span></span><strong><span>自有框架”</span></strong><span>按鈕）。同樣，我們也可以沿關節的軸移動關節，甚至進行更複雜的操作。這就是我們所擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut13.jpg"/></p>
+<p class="imageLabel"><span>[在正確的位置，以正確的方向接合]</span></p>
+<br/>
+<p><span>現在，我們將關節複製回我們的原始場景並進行保存（不要忘記定期保存您的工作！撤消/重做功能很有用，但不能保護您免受其他不幸事件的影響）。我們對機器人中的所有關節重複上述過程，然後重命名它們。我們還將使所有關節的</span><a href="https://www.coppeliarobotics.com/helpFiles/en/jointProperties.htm"><span>關節屬性</span></a><span>稍長一些，以便查看所有<a href="https://www.coppeliarobotics.com/helpFiles/en/jointProperties.htm">關節</a>。通過默認，關節將分配給可見性層2，但可以在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span>對象的公共屬性中</span></a><span>進行更改。現在，我們將所有關節分配給可見性層10，然後</span><a href="https://www.coppeliarobotics.com/helpFiles/en/layerSelectionDialog.htm"><span>為場景</span></a><span>臨時<a href="https://www.coppeliarobotics.com/helpFiles/en/layerSelectionDialog.htm">啟用可見性層10，</a>以使這些關節也可視化（默認情況下，僅激活場景的可見性層1-8）。這就是我們所擁有的（模型</span><em><span>ResizableFloor_5_25</span></em><span>在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/modelDialog.htm"><span>模型屬性對話框中</span></a><span>暫時不可見）：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut14.jpg"/></p>
+<p class="imageLabel"><span>[接頭配置正確]</span></p>
+<br/>
+<p><span>至此，我們可以開始構建模型層次結構並完成模型定義。但是，如果我們希望</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm"><span>動態啟用</span></a><span><span> </span>opur機器人，則還有一個額外的中間步驟：</span></p>
+<br/><br/>
+<table class="subsectionTable">
+<tbody>
+<tr class="subsectionTd">
+<td class="subsectionTd"><a name="dynamicShapes"></a><span>建立動態形狀</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>如果我們希望</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm"><span>動態啟用</span></a><span>機器人，即對碰撞，跌落等做出反應，那麼我們需要適當地創建/配置形狀：形狀可以是：</span></p>
+<ul>
+<li><strong><span>動態或靜態：</span></strong><span>動態（或非靜態）形狀會掉落並受到外力/扭矩的影響。另一方面，靜態（或非動態）形狀將保持不變，或跟隨其父級在場景層次中的移動。</span></li>
+<li><strong><span>可響應或不可響應</span></strong><span>：可響應形狀會引起與其他可響應形狀的碰撞反應。如果它們是動態的，它們（和/或它們的對撞機）的運動將受到影響。另一方面，不負責任的形狀如果與其他形狀發生碰撞，則不會計算碰撞響應。</span></li>
+</ul>
+<p><span>以上兩點都說明</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#staticAndRespondable"><span>這裡</span></a><span>。負責任的形狀應盡可能簡單，以實現快速穩定的仿真。物理引擎將能夠以不同的速度和穩定性模擬以下5種類型的形狀：</span></p>
+<ul>
+<li><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#pureShapes"><span>純形狀</span></a><span>：</span></strong><span>純形狀將穩定並由物理引擎非常有效地處理。缺點是純形狀的幾何形狀受到限制：主要是長方體，圓柱體和球體。如果可能的話，將其用於與其他物品接觸時間較長的物品（例如，人形機器人的腳，串行操縱器的底座，抓手的手指等）。可以使用[菜單欄-&gt;添加-&gt;基本形狀]創建純形狀。</span></li>
+<li><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#pureShapes"><span>純複合形狀</span></a><span>：</span></strong><span>純複合形狀是幾個純形狀的組合。它的性能幾乎與純形狀一樣，並具有相似的特性。可以通過對幾個純形狀進行分組來生成純複合形狀[菜單欄-&gt;編輯-&gt;分組/合併-&gt;分組所選形狀]。</span></li>
+<li><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#convexShapes"><span>凹凸形狀</span></a></strong><span>：凸起的形狀會有點不太穩定，並採取一點點計算時間時通過物理引擎來處理。與純形狀相比，它允許使用更通用的幾何形狀（僅要求：它必須是凸形的）。如果可能，將凸形用於偶爾與其他物品接觸的物品（例如，機器人的各個鏈接）。可以使用[菜單欄-&gt;添加-&gt;選擇的凸包]或[菜單欄-&gt;編輯-&gt;將選擇變形為凸形]生成凸形。</span></li>
+<li><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#convexShapes"><span>複合凸形狀或凸分解形狀</span></a></strong><span>：凸分解形狀是幾個凸形狀的組合。它的性能幾乎與凸形相同，並具有相似的特性。可以通過將多個凸形分組[菜單欄-&gt;編輯-&gt;分組/合併-&gt;分組選定的形狀]，並使用[菜單欄-&gt;添加-&gt;選擇的凸分解...]來生成凸分解形狀。 ]，或使用[菜單欄-&gt;編輯-&gt;將選擇變形到其凸分解...]。</span></li>
+<li><strong><span>隨機形狀</span></strong><span>：隨機形狀是既非凸形也不是純淨的形狀。它通常具有較差的性能（計算速度和穩定性）。盡量避免使用隨機形狀。</span></li>
+</ul>
+<p><span>因此，優先順序為：純形狀，純複合形狀，凸形，複合凸形，最後是隨機形狀。確保還閱讀</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapes.htm"><span>此頁面</span></a><span>。對於要構建的機器人，我們將其基座設為純圓柱體，將其他鏈接設為凸形或凸形分解形狀。</span></p>
+<p><span>我們也可以將動態啟用的形狀用作機器人的可見部分，但是看起來可能不夠好。因此，相反，我們將為在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/buildingAModelTutorial.htm#visibleShapes"><span>本教程第一部分中</span></a><span>創建的每個可見形狀構建一個動態啟用的副本，該副本將保持隱藏狀態：隱藏部分將代表動態模型，並由物理引擎專用，而可見部分將用於可視化，還用於</span><a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm"><span>最小距離計算</span></a><span>，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensors.htm"><span>接近傳感器檢測</span></a><span>等。</span></p>
+<p><span>我們選擇對像</span><em><span>機器人</span></em><span>，將其複制並粘貼到新場景中（以保持原始模型不變），然後啟動</span><a href="https://www.coppeliarobotics.com/helpFiles/en/triangleEditMode.htm"><span>三角形編輯模式</span></a><span>。如果對像</span><em><span>機器人</span></em><span>是複合形狀，我們首先必須將其取消分組（[菜單欄-&gt;編輯-&gt;分組/合併-&gt;取消選定形狀的分組]），然後合併各個形狀（[菜單欄-&gt;在啟動三角形編輯模式之前，請編輯-&gt;分組/合併-&gt;合併選定的形狀]）。現在，我們選擇代表電源線的幾個三角形，並將其刪除。然後，選擇該形狀中的所有三角形，然後單擊“提取圓柱體”。現在我們可以離開編輯模式，我們的基礎對象表示為純圓柱體：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut15.jpg"/></p>
+<p class="imageLabel"><span>[純圓柱體生成過程，在三角形編輯模式下]</span></p>
+<br/>
+<p><span>我們將新形狀（在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span>場景層次結構中</span></a><span>雙擊其名稱）重命名為</span><em><span>robot_dyn</span></em><span>，將其分配給可見性層9，然後將其複製到原始場景。其餘鏈接將建模為凸形或複合凸形。現在，我們選擇第一個移動鏈接（即對象</span><em><span>robot_link1</span></em><span>），並使用[菜單欄-&gt;添加-&gt;選擇的凸包]從中生成凸形。我們將其重命名為</span><em><span>robot_link_dyn1</span></em><span>並將其分配給可見性層9。當提取凸包沒有保留足夠的原始形狀細節時，您仍然可以從其組成元素中手動提取多個凸包，然後將所有凸包與[菜單欄- &gt;編輯-&gt;分組/合併-&gt;分組選定的形狀]。如果這似乎有問題或很耗時，則可以使用[菜單欄-&gt;添加-&gt;選擇的凸分解...]自動提取凸分解的形狀：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut16.jpg"/></p>
+<p class="imageLabel"><span>[原始形狀和凸形吊墜]</span></p>
+<br/>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut17.jpg"/></p>
+<p class="imageLabel"><span>[原始形狀和凸形分解形狀吊墜]</span></p>
+<br/>
+<p><span>現在，我們對所有剩餘的機器人鏈接重複相同的過程。完成後，我們將每個可見的形狀附加到其相應的不可見的動態吊墜上。為此，我們先選擇可見的形狀，然後按住Control鍵並單擊以選擇其動態吊墜，然後選擇[菜單欄-&gt;編輯-&gt;將最後選擇的對象設為父對象]。通過將可見形狀拖動到</span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span>場景層次</span></a><span>中的動態吊墜上，可以達到相同的結果：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut18.jpg"/></p>
+<p class="imageLabel"><span>[可見的形狀附加到動態吊墜上]</span></p>
+<br/>
+<p><span>我們仍然需要注意一些事項：首先，由於我們希望動態形狀僅對物理引擎可見，而對其他計算模塊不可見，因此在<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象通用屬性中</a>取消選中動態形狀的所有</span><strong><span>對象特殊屬性</span></strong><span>。。</span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span></p>
+<p><span>然後，我們仍然必須將動態形狀配置為</span><em><span>dynamic</span></em><span>和</span><em><span>responseable</span></em><span>。我們在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span>形狀動力學屬性中</span></a><span>執行此操作。首先選擇基本動態形狀（即</span><em><span>robot_dyn</span></em><span>），然後檢查“<span> </span></span><strong><span>主體”是否為可響應</span></strong><span>項。啟用前四個“<span> </span></span><strong><span>本地可響應掩碼”</span></strong><span>標誌，並禁用後四個“<span> </span></span><strong><span>本地可響應掩碼”</span></strong><span>標誌：對於連續的可響應鏈接不要彼此衝突非常重要。對於機器人中的第一個移動動態鏈接（即</span><em><span>robot_link_dyn1</span></em><span>），我們還啟用了“<span> </span></span><strong><span>身體可響應”</span></strong><span>項，但是這次我們禁用了前四個“<span> </span></span><strong><span>本地可響應”掩碼</span></strong><span>標誌，並啟用最後4個</span><strong><span>本地可響應掩碼</span></strong><span>標誌。我們對所有其他動態鏈接重複上述過程，同時始終交替使用</span><strong><span>Local Responsible Mask</span></strong><span>標誌：一旦定義了模型，則連續的機器人動態形狀在彼此交互時不會產生任何碰撞響應。嘗試始終以這樣一種構造結束：機器人的動態基礎和機器人的動態最後一個鏈接僅啟用了前4個“<span> </span></span><strong><span>本地可響應掩碼”</span></strong><span>標誌，以便我們可以將機器人附加到移動平台，或附加一個抓取器連接到機器人的最後一個動態鏈接，而沒有動態碰撞干擾。</span></p>
+<p><span>最後，我們仍然需要將動態形狀標記為</span><strong><span>Body is dynamic</span></strong><span>。我們也在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span>形狀動力學屬性中</span></a><span>執行此操作。然後，我們可以手動輸入質量和慣性張量屬性，或者通過單擊“<span> </span></span><strong><span>計算選定凸形的質量和慣性屬性”來</span></strong><span>自動計算（推薦）那些值。還請記住</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#masses"><span>這一點</span></a><span>以及</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#inertias"><span>該</span></a><span>動態設計注意事項。機器人的動態基礎是一個特例：大多數情況下，我們需要機器人的基礎（即</span><em><span>robot_dyn</span></em><span>）為非動態（即靜態），否則，如果單獨使用，則機器人可能會在運動過程中掉落。但是，一旦我們將機器人的底座連接到移動平台上，我們就希望底座變得動態（即非靜態）。我們通過啟用“<span> </span></span><strong><span>如果獲取父</span></strong><span>項時<strong>設置為動態”</strong>項，然後禁用“<span> </span></span><strong><span>主體為動態項”<span> </span></span></strong><span><strong>來</strong>做到這一點。現在運行仿真：除了機器人的基座之外，所有動態形狀都應下降。附加的視覺形狀將跟隨其動態吊墜。</span></p>
+<br/><br/>
+<table class="subsectionTable">
+<tbody>
+<tr class="subsectionTd">
+<td class="subsectionTd"><a name="modelDefinition"></a><span>型號定義</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>現在我們準備定義模型了。我們從建立模型層次結構開始：通過選擇<em>robot_link_dyn6</em>，然後控制選擇<em>robot_joint6</em>，然後選擇[菜單欄-&gt;編輯-&gt;使最後一個選中的對象，將最後一個動態機器人鏈接（</span><em><span>robot_link_dyn6</span></em><span>）附加到其相應的關節（</span><em><span>robot_joint6</span></em><span>）。父母]。我們也可以做這一步通過簡單的拖動對象<em>robot_link_dyn6</em>到<em>robot_link6</em>在<a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">場景層次</a>。現在，我們將<em>robot_joint6</em>附加到<em>robot_link_dyn5上</em>，依此類推，直到到達機器人的底部。現在，我們具有以下場景層次結構：</span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span></span></a><span></span><em><span></span></em><span></span><em><span></span></em><span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut19.jpg"/></p>
+<p class="imageLabel"><span>[機器人模型層次結構]</span></p>
+<br/>
+<p><span>為模型庫起一個簡單的名字是很好而且更合乎邏輯的，因為模型庫也將代表模型本身。因此，我們將</span><em><span>robot</span></em><span>重命名為</span><em><span>robot_visibleBase</span></em><span>，並將</span><em><span>robot_dyn</span></em><span>重命名為</span><em><span>robot</span></em><span>。現在，我們選擇層次結構樹的基礎（即對像</span><em><span>機械手</span></em><span>），並在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span>對象公共屬性中</span></a><span>啟用“<span> </span></span><strong><span>對象為模型基礎”</span></strong><span>。我們還使</span><strong><span>對象/模型可以轉移或接受DNA</span></strong><span>。出現了一個模型包圍盒，包圍了整個機器人。但是，邊界框似乎太大：這是因為邊界框還包含了不可見的項，例如關節。現在，通過對所有關節啟用</span><strong><span>“不顯示為內部模型”選擇</span></strong><span>項，將關節從模型邊界框中排除。我們可以對模型中的所有不可見項執行相同的過程。這也是一個有用的選項，可以將大型傳感器或其他項目也排除在模型邊界框之外。我們現在有以下情況：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut20.jpg"/></p>
+<p class="imageLabel"><span>[機器人模型邊界框]</span></p>
+<br/>
+<p><span>現在，我們保護模型免受意外修改。我們選擇機器人中所有可見的對象，然後啟用“<span> </span></span><strong><span>選擇模型的基礎”</span></strong><span>：如果現在單擊場景中的可見鏈接，則會改為選擇機器人的基礎。這使我們可以像對待單個對像一樣操作模型。我們仍然可以通過按住Shift鍵並單擊場景或在場景層次中選擇對象來選擇機器人中的可見對象。現在，我們將機器人置於正確的默認位置/方向。首先，我們將當前場景保存為參考（例如，如果稍後需要在當前機器人上導入具有相同方向的CAD數據）。然後我們選擇模型並</span><a href="https://www.coppeliarobotics.com/helpFiles/en/coordinateDialog.htm"><span>修改其位置/方向</span></a><span>適當地。將模型（即其基礎對象）放置在X = 0和Y = 0處被認為是一種好習慣。</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut21.jpg"/></p>
+<p class="imageLabel"><span>[默認配置下的機器人型號]</span></p>
+<br/>
+<p><span>現在我們運行模擬：由於默認情況下關節不受控制，因此機器人將崩潰。</span><a href="https://www.coppeliarobotics.com/helpFiles/en/buildingAModelTutorial.htm#joints"><span>在上一階段添加關節時</span></a><span>，我們以力/扭矩模式創建了關節，但其電動機或控制器已禁用（默認情況下）。現在，我們可以根據需要調整關節。在我們的案例中，我們希望為每個控制器都提供一個簡單的PID控制器。在關節動態屬性中，單擊“<span> </span></span><strong><span>啟用電動機”</span></strong><span>並調整</span><strong><span>最大扭矩</span></strong><span>。然後，我們點擊</span><strong><span>啟用了控制環，</span></strong><span>然後選擇</span><strong><span>位置控制（PID）</span></strong><span>。現在，我們再次運行仿真：機器人應保持其位置。嘗試切換當前的物理引擎，以查看行為在所有受支持的物理引擎之間是否一致。您可以通過適當的</span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#toolbars"><span>工具欄按鈕</span></a><span>，或在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/dynamicsDialog.htm"><span>常規動力學屬性中執行此操作</span></a><span>。</span></p>
+<p><span>在仿真過程中，我們現在通過“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#toolbars"><span>動態內容可視化和驗證”工具欄按鈕來</span></a><span>驗證場景動態內容。現在，將僅顯示物理引擎考慮的項目，並且該顯示使用</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#dynamicContentVisualization"><span>顏色編碼</span></a><span>。這是</span><strong><span>非常重要的</span></strong><span>，始終做到這一點，特別是當預期，為了快速調試模型動態模型不表現。同樣，在仿真過程中請始終查看場景層次：動態啟用的對象應在其名稱的右側顯示一個球形圖標。</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut22.jpg"/></p>
+<p class="imageLabel"><span>[動態內容可視化和驗證]</span></p>
+<br/>
+<p><span>最後，我們需要準備機器人，以便我們可以輕鬆地將抓取器連接到它，或輕鬆地將機器人連接到移動平台（例如）。可以通過兩種不同的方式將兩個動態啟用的形狀嚴格地彼此附加：</span></p>
+<ul>
+<li><strong><span>通過對它們進行分組</span></strong><span>：選擇形狀，然後單擊[菜單欄-&gt;編輯-&gt;分組/合併-&gt;對選定形狀進行分組]。</span></li>
+<li><strong><span>通過通過力/扭矩傳感器進行連接</span></strong><span>：</span><a href="https://www.coppeliarobotics.com/helpFiles/en/forceSensors.htm"><span>力扭矩傳感器</span></a><span>還可以充當兩個單獨的動態啟用形狀之間的剛性鏈接。</span></li>
+</ul>
+<p><span>在我們的情況下，只有選項2是有意義的。我們使用[菜單欄-&gt;添加-&gt;力傳感器]創建一個力/扭矩傳感器，然後將其移動到機器人的尖端，然後將其附加到對象</span><em><span>robot_link_dyn6上</span></em><span>。我們會適當地更改其尺寸和外觀（紅色力/扭矩傳感器通常被視為可選的連接點，請檢查可用的各種機器人型號）。我們還將其名稱更改為</span><em><span>robot_attachment</span></em><span>：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut23.jpg"/></p>
+<p class="imageLabel"><span>[附著力/扭矩傳感器]</span></p>
+<br/>
+<p><span>現在，我們將抓取器模型拖到場景中，使其保持選中狀態，然後按住Control鍵並點按附件力傳感器，然後單擊“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#toolbars"><span>裝配/拆卸”工具欄按鈕</span></a><span>。夾持器到位：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut24.jpg"/></p>
+<p class="imageLabel"><span>[附帶的抓爪]</span></p>
+<br/>
+<p><span>抓具知道如何附加自身，因為它在模型定義期間進行了適當的配置。現在，我們還需要正確配置機器人模型，以便它將知道如何將自己附加到移動基座上。我們選擇機器人模型，然後在<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象公共屬性中</a>單擊“<span> </span></span><strong><span>組裝</span></strong><span><span> </span>”<span> </span>。為<strong>“父項”匹配值</strong>設置一個空字符串，然後點擊<strong>設置矩陣</strong>。這將記住當前基礎對象的局部轉換矩陣，並使用它相對於移動機器人的附著點定位/定向。為了驗證我們做的正確，我們拖動模型<em>Models / robots / mobile / KUKA Omnirob.ttm</em></span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><em><span></span></em><span>進入現場。然後，選擇機器人模型，然後在移動平台上按住Control鍵並單擊其中一個附接點，然後單擊“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#toolbars"><span>組裝/拆卸”工具欄按鈕</span></a><span>。我們的機器人應該正確地將自己放置在移動機器人的頂部：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/modelTut25.jpg"/></p>
+<p class="imageLabel"><span>[附帶的機器人]</span></p>
+<br/>
+<p><span>現在，我們可以向機器人添加其他項目，例如傳感器。在某些時候，我們可能還希望將</span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm"><span>嵌入式腳本</span></a><span>附加到我們的模型中，以便控制其行為或出於各種目的對其進行配置。在這種情況下，請確保了解</span><a href="https://www.coppeliarobotics.com/helpFiles/en/accessingGeneralObjects.htm"><span>如何從嵌入式腳本訪問對象句柄</span></a><span>。我們還可以通過</span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm"><span>插件</span></a><span>，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm"><span>遠程API</span></a><span>客戶端，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/rosInterfaces.htm"><span>ROS</span></a><span>節點，</span><a href="https://www.coppeliarobotics.com/helpFiles/en/blueZeroPlugin.htm"><span>BlueZero</span></a><span>節點或</span><a href="https://www.coppeliarobotics.com/helpFiles/en/addOns.htm"><span>附加組件</span></a><span>來控制/訪問/接口模型。</span></p>
+<p><span>現在，確保已恢復在機械手和抓爪安裝過程中所做的更改，我們折疊了機械手模型的層次樹，選擇了模型的基礎，然後使用[菜單欄-&gt;文件-&gt;將模型另存為...]。如果我們將其保存在</span><em><span>模型</span></em><span>文件夾中，則該模型將在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#ModelBrowser"><span>模型瀏覽器中</span></a><span>可用。</span></p>
+<br/><br/></td>
+</tr>
+</tbody>
+</table>
+<p><span></span></p>
 <h1>機械設計過程</h1>
 <p>來自<a class="link" href="https://drive.google.com/file/d/13THamnfayiRT4Wa9KzmjXQSP4ZW2jIej/view" rel="nofollow noopener noreferrer" target="_blank">MechanicalDesignProcess.pdf</a></p>
 <h4>序章</h4>
@@ -569,24 +838,20 @@ print(group[36:49])</pre>
 <pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">4000美元的工具降低5美元零件的單價的投資回報率是多少？
 已知新的加工件價格（$ 1）並訂購了數量（例如，每月= 200個零件/月），則ROI = 5個月。因此，基本上$ 4000的投資回報為5個月。</span></pre>
 <pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW"> </span></pre>
-<pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW"> </span></pre>
-<h1>WEEK10~14</h1>
-<p>week10 meeting</p>
-<p><a href="https://drive.google.com/file/d/1Z1Sy1RxOChwe6yRICJ-dkrOe5UQMvveX/view">https://drive.google.com/file/d/1Z1Sy1RxOChwe6yRICJ-dkrOe5UQMvveX/view</a></p>
-<h4>google用戶登陸設置</h4>
-<ol>
-<li><span>登錄到您的@gm帳戶</span></li>
-<li><span>連結到</span><a href="https://console.developers.google.com/"><span>https://console.developers.google.com</span></a></li>
-<li><span>接受許可並創建Google API項目</span></li>
-<li><span>啟用Google +域API</span></li>
-<li><span>在Google + Domain API憑據下，按CONFIGURE CONSENT SCREEN按鈕</span></li>
-<li><span>選擇內部或外部用戶類型並添加新的應用程序名稱</span></li>
-<li><span>在“ API和服務”下，進入“憑據”頁面</span></li>
-<li><span><span _ngcontent-ith-c126="" class="cfc-table-title ng-star-inserted" id="cfc-table-caption-1" role="presentation">為Web應用程序</span>創建“<span> </span></span><span _ngcontent-ith-c126="" class="cfc-table-title ng-star-inserted" id="cfc-table-caption-1" role="presentation"><span>OAuth 2.0客戶端ID”類型的憑據</span></span></li>
-<li><span>授權的JavaScript來源：</span><a href="https://localhost:8443/"><span>https：// localhost：8443</span></a></li>
-<li><span>授權的重定向URI：</span><a href="https://localhost:8443/login/google/"><span>https：// localhost：8443 / login / google /</span></a></li>
-<li><span>將您的客戶ID和客戶機密保存到oauth_gm.txt中</span><span></span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YBqo96lU0Gk" width="560"></iframe></li>
-</ol>
+<ul>
+<li><span lang="zh-TW"></span></li>
+</ul>
+<p>"tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr"&gt;<span lang="zh-TW"><br/>What is the ROI on a $4000 tool to bring down the piece price of a $5 part? Once<br/>the new tooled piece price is known ($1) and the numbers are ordered (say, per<br/>month = 200 parts/month), then the ROI = 5 months. So, basically the return on<br/>investment of $4000 will be 5 months.<br/><br/></span></p>
+<pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">4000美元的工具降低5美元零件的單價的投資回報率是多少？
+已知新的加工件價格（$ 1）並訂購了數量（例如，每月= 200個零件/月），則ROI = 5個月。因此，基本上$ 4000的投資回報為5個月。</span></pre>
+<pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW"> </span></pre>
+<ul>
+<li><span lang="zh-TW"></span></li>
+</ul>
+<p>i&gt; "tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr"&gt;<span lang="zh-TW"><br/>What is the ROI on a $4000 tool to bring down the piece price of a $5 part? Once<br/>the new tooled piece price is known ($1) and the numbers are ordered (say, per<br/>month = 200 parts/month), then the ROI = 5 months. So, basically the return on<br/>investment of $4000 will be 5 months.<br/><br/></span></p>
+<pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">4000美元的工具降低5美元零件的單價的投資回報率是多少？
+已知新的加工件價格（$ 1）並訂購了數量（例如，每月= 200個零件/月），則ROI = 5個月。因此，基本上$ 4000的投資回報為5個月。</span></pre>
+<pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW"> </span></pre>
 <ul>
 <li><span lang="zh-TW"></span></li>
 </ul>

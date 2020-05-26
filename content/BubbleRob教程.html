@@ -1,0 +1,253 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>CMSiMDE 網際內容管理系統</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">CMSiMDE 網際內容管理系統</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='WEEK1~5.html'>WEEK1~5</a><ul class='dropdown'><li><a href='解釋亂數分組之程序.html'>解釋亂數分組之程序</a></li></ul><li><a href='WEEK6~9.html'>WEEK6~9</a><li><a href='WEEK10~14.html'>WEEK10~14</a><li class='has-children'><a href='CoppeliaSlim.html'>CoppeliaSlim</a><ul class='dropdown'><li><a href='BubbleRob教程.html'>BubbleRob教程</a><li><a href='Building a clean model tutorial(建構純模型).html'>Building a clean model tutorial(建構純模型)</a></li></ul><li><a href='機械設計過程.html'>機械設計過程</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">CoppeliaSlim << <a href='CoppeliaSlim.html'>Previous</a> <a href='Building a clean model tutorial(建構純模型).html'>Next</a> >> Building a clean model tutorial(建構純模型)<br /><h1>BubbleRob教程</h1>
+<p><span>本教程將在設計簡單的移動機器人</span><em><span>BubbleRob</span></em><span>時嘗試介紹很多CoppeliaSim功能</span><span>。下圖說明了我們將設計的仿真場景：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut1.jpg"/></p>
+<p></p>
+<p><span>由於本教程將跨越許多不同的方面，因此也請看看</span><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm"><span>其他教程</span></a><span>，主要是</span><a href="https://www.coppeliarobotics.com/helpFiles/en/buildingAModelTutorial.htm"><span>有關構建仿真模型</span></a><span>的<a href="https://www.coppeliarobotics.com/helpFiles/en/buildingAModelTutorial.htm">教程</a>。首先，重新啟動CoppeliaSim。模擬器顯示默認</span><a href="https://www.coppeliarobotics.com/helpFiles/en/scenes.htm"><span>場景</span></a><span>。我們將從</span><em><span>BubbleRob</span></em><span>的主體開始。</span></p>
+<p><span>我們使用[菜單欄-&gt;添加-&gt;基本形狀-&gt;球體]向場景中添加直徑為0.2的基本球體。我們將</span><strong><span>X尺寸</span></strong><span>項目調整為<strong>0.2</strong>，然後點擊</span><strong><span>確定</span></strong><span>。默認情況下，創建的球體將顯示在可見層</span><span>1中，並且是動態且可響應</span><span>的</span><span>（因為我們已啟用“<span> </span></span><strong><span>創建動態且可響應的形狀</span></strong><span><span> </span>”項）。這代表</span><em><span>BubbleRob的</span></em><span>身體會掉落，並且能夠對與其他可響應形狀的碰撞做出反應（由物理引擎模擬）。我們可以看到這是形狀動力學</span><span>：項目</span><strong><span>身體是可響應的</span></strong><span>，</span><strong><span>身體是動態的</span></strong><span>已啟用。我們開始仿真（通過工具欄按鈕，或在場景窗口中按&lt;control-space&gt;），然後復制並黏貼創建的球體（使用[菜單欄-&gt;編輯-&gt;複製所選對象]，然後[菜單欄-&gt;編輯-&gt;粘貼緩衝區]，或先按&lt;control-c&gt;，再按&lt;control-v&gt;）：這兩個球將對碰撞做出反應並滾動。我們停止模擬：重複的球體將自動刪除。可以在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><span>模擬對話框中</span></a><span>修改此默認行為。</span></p>
+<p><span>我們還希望</span><em><span>BubbleRob的</span></em><span>主體可以被其他計算模塊（例如</span><a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm"><span>最小距離計算模塊</span></a><span>）使用。因此，如果尚未啟用，則在該形狀的<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象公共屬性中</a>啟用</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span>Collidable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>Measurable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span>Renderable</span></a></strong><span>和</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span>Detectable</span></a></strong><span>。如果需要，我們現在還可以在<a href="https://www.coppeliarobotics.com/helpFiles/en/shapeProperties.htm">形狀屬性中</a>更改球體的視覺外觀。</span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeProperties.htm"><span></span></a><span></span></p>
+<p><span>現在，我們在“<span> </span><strong>平移”</strong>選項卡上打開“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span>位置”對話框</span></a><span>，選擇代表<em>BubbleRob</em>身體的球體，然後為“<span> </span><strong>沿Z”</strong>輸入0.02<span> </span>。我們確保將<strong>相對</strong>項設置為<strong>World</strong>。然後，單擊<strong>翻譯選擇</strong>。這會將所有選定對象沿絕對Z軸平移2 cm，並有效地將我們的球體抬高了一點。在<a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">場景層次結構中</a>，我們雙擊球體的名稱，以便我們可以編輯其名稱。我們輸入<em>bubbleRob</em>，然後按Enter。</span><strong><span></span></strong><span></span><em><span></span></em><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span></span></a><span></span><em><span></span></em><span></span></p>
+<p><span>接下來，我們將添加一個</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensors.htm"><span>接近傳感器，</span></a><span>以便</span><em><span>BubbleRob</span></em><span>知道它何時接近障礙物：我們選擇[菜單欄-&gt;添加-&gt;接近傳感器-&gt;圓錐類型]。在<strong>方向</strong>選項卡上的</span><a href="https://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm"><span>方向對話框中</span></a><span>，我們為<strong>Y周圍</strong>和<strong>Z<span> </span></strong><strong>周圍</strong>輸入90<span> </span>，然後單擊<strong>旋轉選擇</strong>。在<a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm">位置對話框</a>的“<span> </span><strong>位置”</strong>選項卡上，為<strong>X坐標</strong>輸入0.1<span> </span><strong>。</strong><strong>Z坐標</strong>為0.12<span> </span><strong>。</strong>現在，接近傳感器已相對於<em>BubbleRob的</em>身體正確定位。我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy">場景層次中</a>雙擊接近傳感器的圖標</span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span></span></a><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/userInterface.htm#SceneHierarchy"><span></span></a><span>打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorPropertiesDialog.htm"><span>其屬性</span></a><span>對話框。我們單擊</span><strong><span>顯示體積參數</span></strong><span>以打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorVolumeDialog.htm"><span>接近傳感器體積對話框</span></a><span>。我們將</span><strong><span>偏移量</span></strong><span>調整為0.005，</span><strong><span>角度</span></strong><span>調整為30，</span><strong><span>範圍調整</span></strong><span>為0.15。然後，在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorPropertiesDialog.htm"><span>接近傳感器屬性中</span></a><span>，單擊</span><strong><span>顯示檢測參數</span></strong><span>。這將打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/proximitySensorDetectionParameterDialog.htm"><span>接近傳感器檢測參數對話框</span></a><span>。</span><strong><span>如果距離小於</span></strong><span>則取消選中<strong>“不允許檢測”</strong>項，然後再次關閉該對話框。在場景層次中，我們雙擊接近傳感器的名稱，以便我們可以編輯其名稱。我們輸入</span><em><span>bubbleRob_sensingNose</span></em><span>並按回車鍵。</span></p>
+<p><span>我們選擇</span><em><span>bubbleRob_sensingNose</span></em><span>，然後<em>按住</em><span> </span>Control鍵選擇</span><em><span>bubbleRob</span></em><span>，然後單擊[菜單欄-&gt;編輯-&gt;將最後一個選定的對象設為父對象]。這會將傳感器連接到機器人的身體。我們也可以拖</span><em><span>bubbleRob_sensingNose</span></em><span>到</span><em><span>bubbleRob</span></em><span>在場景層次。這就是我們現在擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut2.jpg"/></p>
+<p class="imageLabel"><span>[接近傳感器連接到</span><em><span>bubbleRob的</span></em><span>身體]</span></p>
+<p></p>
+<p><span>接下來，我們將照顧</span><em><span>BubbleBub的</span></em><span>車輪。我們使用[菜單欄-&gt;文件-&gt;新場景]創建一個新場景。通常情況下，跨多個場景工作非常方便，以便可視化並僅對特定元素進行工作。我們添加一個尺寸為（0.08,0.08,0.02）的純原始圓柱體。至於</span><em><span>BubbleRob</span></em><span>的主體，如果尚未啟用，則在該圓柱的<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象公共屬性中</a>啟用<span> </span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span>Collidable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>Measurable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span>Renderable</span></a></strong><span>和</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span>Detectable</span></a></strong><span>。然後，將圓柱的絕對位置設置為（0.05,0.1,0.04），並將其絕對方向設置為（-90,0,0）。我們將名稱更改為<em>bubbleRob_leftWheel</em></span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span><em><span></span></em><span>。我們複製並粘貼滾輪，然後將復制的絕對Y坐標設置為-0.1。我們將副本重命名為</span><em><span>bubbleRob_rightWheel</span></em><span>。我們選擇兩個輪子，複製它們，然後切換回場景1，然後粘貼輪子。</span></p>
+<p><span>現在，我們需要為車輪添加</span><a href="https://www.coppeliarobotics.com/helpFiles/en/joints.htm"><span>接頭</span></a><span>（或電動機）。我們單擊[菜單欄-&gt;添加-&gt;關節-&gt;旋轉]將旋轉關節添加到場景。在大多數情況下，將新對象添加到場景時，該對象將出現在世界的起源處。我們保持關節處於選中狀態，然後控制選擇</span><em><span>bubbleRob_leftWheel</span></em><span>。在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/positionDialog.htm"><span>位置對話框</span></a><span>的“<span> </span></span><strong><span>位置”</span></strong><span>選項卡上，我們單擊“<span> </span></span><strong><span>應用於”選擇</span></strong><span>按鈕：這將關節定位在左輪的中心。然後，在“<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/orientationDialog.htm"><span>方向”對話框</span></a><span>的“<span> </span></span><strong><span>方向”</span></strong><span>選項卡上，執行相同的操作：這將關節與左輪<strong>定向的方向</strong>相同。我們將關節重命名為</span><em><span>bubbleRob_leftMotor</span></em><span>。現在，我們在場景層次中雙擊關節的圖標以打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/jointProperties.htm"><span>關節屬性</span></a><span>對話框。然後，單擊“<span> </span></span><strong><span>顯示動態參數”</span></strong><span>以打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/jointDynamicsProperties.htm"><span>關節動力學屬性</span></a><span>對話框。我們</span><strong><span>啟用電動機</span></strong><span>，並選中項目“<span> </span></span><strong><span>目標速度為零時鎖定電動機”</span></strong><span>。現在，我們對右馬達重複相同的過程，並將其重命名為</span><em><span>bubbleRob_rightMotor</span></em><span>。現在，我們將左輪連接到左馬達，將右輪連接到右馬達，然後將兩個馬達連接到</span><em><span>bubbleRob</span></em><span>。這就是我們所擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut3.jpg"/></p>
+<p class="imageLabel"><span>[接近傳感器，電動機和車輪]</span></p>
+<p></p>
+<p><span>我們運行模擬，並註意到機器人向後倒下。我們仍然缺少與地板的第三個聯繫點。現在，我們添加一個小的滑塊（或腳輪）。在一個新場景中，我們添加一個直徑為0.05的純原始球體，並將其設置為</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span>Collidable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>Measurable</span></a></strong><span>，</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span>Renderable</span></a></strong><span>和</span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span>Detectable</span></a></strong><span>（如果尚未啟用），然後將其重命名為</span><em><span>bubbleRob_slider</span></em><span>。我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm">形狀動力學屬性</a>中將</span><strong><span>Material</span></strong><span>設置為</span><em><span>noFrictionMaterial</span></em><span>。為了將滑塊與機器人的其餘部分牢固地鏈接在一起，我們使用[菜單欄-&gt;添加-&gt;力傳感器]<span> </span>添加了<a href="https://www.coppeliarobotics.com/helpFiles/en/forceSensors.htm">力傳感器對象</a>。我們將其重命名為</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span></span></a><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/forceSensors.htm"><span></span></a><span></span><em><span>bubbleRob_connection</span></em><span>並將其上移0.05。我們將滑塊連接到力傳感器，然後復制兩個對象，切換回場景1並粘貼它們。然後，我們將力傳感器沿絕對X軸移動-0.07，然後將其安裝到機器人主體上。如果現在運行仿真，我們會注意到滑塊相對於機器人主體略微移動：這是因為兩個對象（即</span><em><span>bubbleRob_slider</span></em><span>和</span><em><span>bubbleRob</span></em><span>）都相互碰撞。為了避免在動力學模擬過程中產生奇怪的影響，我們必須通知CoppeliaSim兩個對像不會相互碰撞，我們可以通過以下方式進行此操作：在</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span>shape dynamics屬性中</span></a><span>，為</span><em><span>bubbleRob_slider</span></em><span>設置了</span><strong><span>本地可響應蒙版</span></strong><span>設置為00001111，對於</span><em><span>bubbleRob</span></em><span>，我們將</span><strong><span>本地可響應掩碼</span></strong><span>設置為11110000。如果再次運行仿真，我們會注意到兩個對像不再乾涉。這就是我們現在擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut4.jpg"/></p>
+<p class="imageLabel"><span>[接近傳感器，電機，車輪和滑塊]</span></p>
+<p></p>
+<p><span>我們再次運行仿真，發現即使在電機鎖定的情況下，</span><em><span>BubbleRob也會</span></em><span>輕微移動。我們還嘗試使用不同的物理引擎運行仿真：結果將有所不同。動態仿真的穩定性與所涉及的非靜態形狀的質量和慣性緊密相關。有關此效果的說明，請務必仔細閱讀</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#masses"><span>本</span></a><span>節和</span><a href="https://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm#inertias"><span>該</span></a><span>節。現在，我們嘗試糾正這種不良影響。我們選擇兩個輪子和滑塊，然後在“形狀動力學”對話框中單擊3次</span><strong><span>M = M * 2（用於選擇）</span></strong><span>。結果是所有選定形狀的質量都將乘以8。我們對3個選定形狀的慣性進行相同的操作，然後再次運行仿真：穩定性得到了改善。在關節動力學對話框中，我們將兩個電機的</span><strong><span>目標速度</span></strong><span>都設置為50。我們運行模擬：</span><em><span>BubbleRob</span></em><span>現在向前移動並最終掉下地面。我們將兩個電機的</span><strong><span>目標速度</span></strong><span>項都重置為零。</span></p>
+<p><span>對象</span><em><span>bubbleRob</span></em><span>是所有以後將形成<em>BubbleRob<span> </span></em><a href="https://www.coppeliarobotics.com/helpFiles/en/models.htm">模型的</a></span><a href="https://www.coppeliarobotics.com/helpFiles/en/objects.htm"><span>對象</span></a><span>的基礎。我們將在稍後定義模型。同時，我們要定義代表<em>BubbleRob</em>的對象的集合。為此，我們定義了一個<a href="https://www.coppeliarobotics.com/helpFiles/en/collections.htm">集合對象</a>。我們單擊[菜單欄-&gt;工具-&gt;集合]以打開<a href="https://www.coppeliarobotics.com/helpFiles/en/collectionsDialog.htm">集合對話框</a>。或者，我們也可以通過單擊相應的工具欄按鈕來打開對話框：</span><em><span></span></em><a href="https://www.coppeliarobotics.com/helpFiles/en/models.htm"><span></span></a><span></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/collections.htm"><span></span></a><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/collectionsDialog.htm"><span></span></a><span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/collectionDialog1.jpg"/></p>
+<p></p>
+<p><span>在集合對話框中，點擊</span><strong><span>添加新集合</span></strong><span>。一個新的集合對像出現在下面的列表中。目前，新添加的集合仍為空（未定義）。在列表中選擇了新的收藏項目後，在場景層次中選擇</span><em><span>bubbleRob</span></em><span>，然後在收藏對話框中單擊“<span> </span></span><strong><span>添加</span></strong><span><span> </span>”。現在，我們的集合被定義為包含層次結構樹的所有對象（從</span><em><span>bubbleRob</span></em><span>對<em>像</em>開始）（集合的組成顯示在“<span> </span></span><strong><span>組成元素和屬性”</span></strong><span>部分）。要編輯集合名稱，請雙擊它，並將其重命名為</span><em><span>bubbleRob_collection</span></em><span>。我們關閉收集對話框。</span></p>
+<p><span>在此階段，我們希望能夠跟踪BubbleRob與任何其他對象之間的最小距離。為此，我們使用[菜單欄-&gt;工具-&gt;計算模塊屬性]<span> </span>打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm"><span>距離對話框</span></a><span>。或者，我們也可以使用相應的工具欄按鈕打開計算模塊屬性對話框：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/calculationModuleButton.jpg"/></p>
+<p></p>
+<p><span>在距離對話框中，單擊</span><strong><span>添加新的距離對象，</span></strong><span>然後選擇一個距離對：</span><em><span>[collection] bubbleRob_collection-場景中的所有其他可測量對象</span></em><span>。這只是添加了一個距離對象，該對象將測量集合</span><em><span>bubbleRob_collection</span></em><span>（即該集合中的任何</span><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span>可測量對象</span></a><span>）與場景中任何其他可測量對象之間的最小距離。我們通過雙擊其名稱將距離對象重命名為</span><em><span>bubbleRob_distance</span></em><span>。我們關閉距離對話框。現在，當我們運行模擬時，我們將看不到任何區別，因為距離對象將嘗試測量（並顯示）<em>BubbleRob</em>之間的最小距離段</span><em><span></span></em><span>以及場景中的其他任何可測量對象。問題在於，在此階段，場景中沒有其他可測量的對象（定義地板的形狀默認情況下已禁用其可測量的屬性）。在本教程的後續階段，我們將為場景添加障礙。</span></p>
+<p><span>接下來，我們將向<em>BubbleRob</em>添加一個</span><a href="https://www.coppeliarobotics.com/helpFiles/en/graphs.htm"><span>圖形對象</span></a><span>，以顯示最小距離以上的距離，同時還顯示<em>BubbleRob</em>隨時間<em>的</em>軌跡。我們單擊[菜單欄-&gt;添加-&gt;圖]並將其重命名為<em>bubbleRob_graph</em>。我們將圖形附加到<em>bubbleRob</em>，並將圖形的絕對坐標設置為（0,0,0.005）。現在，通過在場景層次結構中雙擊其圖標來打開<a href="https://www.coppeliarobotics.com/helpFiles/en/graphPropertiesDialog.htm">圖形屬性</a>對話框。我們取消選中“<span> </span><strong>顯示XYZ平面”</strong>，然後單擊“<span> </span><strong>添加新數據流”以進行記錄，</strong>然後選擇“<span> </span><strong>對象：</strong><strong>數據流類型的</strong><strong>絕對x位置</strong><span> </span>”<span> </span>和“<span> </span><em>bubbleRob_graph”</em></span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/graphPropertiesDialog.htm"><span></span></a><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><em><span></span></em><span>用於</span><strong><span>記錄</span></strong><span>的<strong>對象/項目</strong>。</span><strong><span>數據流記錄列表中</span></strong><span>出現了一個項目。該項目是</span><em><span>bubbleRob_graph的</span></em><span>絕對X坐標的數據流（即，將記錄</span><em><span>bubbleRobGraph的</span></em><span>對象的絕對X位置）。現在，我們還想記錄y和z位置：我們以與上述類似的方式添加這些數據流。現在，我們有3個數據流，分別表示BubbleRob的x，y和z軌跡。我們將添加更多的數據流，使我們能夠跟踪我們的機器人與環境之間的最小距離：我們點擊</span><strong><span>添加新的數據流記錄</span></strong><span>，並選擇</span><strong><span>距離：段長度</span></strong><span>的</span><strong><span>數據流類型</span></strong><span>，並</span><em><span>bubbleRob_distance</span></em><span>用於</span><strong><span>記錄</span></strong><span>的<strong>對象/項目</strong>。在</span><strong><span>數據流記錄列表中</span></strong><span>，我們現在將Data重命名為bubbleRob_x_pos，將Data0重命名為bubbleRob_y_pos，將Data1重命名為bubbleRob_z_pos，將Data2重命名為bubbleRob_obstacle_dist。</span></p>
+<p><span>我們在“<span> </span><strong>數據流”記錄列表中</strong>和“<span> </span><strong>時間圖屬性”</strong>部分中選擇</span><em><span>bubbleRob_x_pos</span></em><span>，取消選中“<span> </span><strong>可見”</strong>。我們對<em>bubbleRob_y_pos</em>和<em>bubbleRob_z_pos</em>都執行相同的<em>操作</em>。這樣，在時間圖中只能看到<em>bubbleRob_obstacle_dist</em>數據流。以下是我們應該擁有的：</span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><em><span></span></em><span></span><em><span></span></em><span></span><em><span></span></em><span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut5.jpg"/></p>
+<p class="imageLabel"><span>[圖形屬性]</span></p>
+<p></p>
+<p><span>接下來，我們將建立一個顯示</span><em><span>BubbleRob</span></em><span>軌蹟的</span><strong><span>3D曲線</span></strong><span>：單擊<strong>編輯3D曲線</strong>打開</span><a href="https://www.coppeliarobotics.com/helpFiles/en/graphCurvePropertiesDialog.htm"><span>XY圖和3D曲線對話框</span></a><span>，然後單擊</span><strong><span>添加新曲線</span></strong><span>。在對話框彈出打開，我們選擇</span><em><span>bubbleRob_x_pos</span></em><span>為</span><strong><span>X-值</span></strong><span>項，</span><em><span>bubbleRob_y_pos</span></em><span>為</span><strong><span>Y值</span></strong><span>項，</span><em><span>bubbleRob_z_pos</span></em><span>的</span><strong><span>Z值</span></strong><span>項目。我們將新添加的曲線從</span><em><span>Curve</span></em><span>重命名為bubbleRob_path。最後，我們檢查“<span> </span></span><strong><span>相對於世界”</span></strong><span>項目並將“<span> </span></span><strong><span>曲線寬度”</span></strong><span>設置為4：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut6.jpg"/></p>
+<p class="imageLabel"><span>[3D曲線屬性]</span></p>
+<p></p>
+<p><span>我們關閉與圖有關的所有對話框。現在我們將一個電機</span><strong><span>目標速度</span></strong><span>設置為50，運行模擬，然後將看到</span><em><span>BubbleRob的</span></em><span>軌跡顯示在場景中。然後，我們停止仿真並將電動機目標速度重置為零。</span></p>
+<p><span>我們添加具有以下尺寸的純原始圓柱體：（0.1，0.1，0.2）。我們希望此圓柱體是靜態的（即不受重力或碰撞的影響），但仍會對非靜態的可響應形狀施加一些碰撞響應。為此，我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm">形狀動力學屬性中</a>禁用“<span> </span></span><strong><span>主體是動態</span></strong><span>的”<span> </span>。我們也希望我們的汽缸是<span> </span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm">可碰撞</a></strong>，<strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm">可衡量的</a></strong>，<strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm">可渲染</a></strong>和<strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm">檢測的</a></strong>。我們在<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">對象的通用屬性中</a>執行此操作。現在，在仍然選擇圓柱體的情況下，我們單擊對象平移工具欄按鈕：</span><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm"><span></span></a><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collidableObjects.htm"><span></span></a></strong><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/measurableObjects.htm"><span></span></a></strong><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/renderableObjects.htm"><span></span></a></strong><span></span><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/detectableObjects.htm"><span></span></a></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span></span></a><span></span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/objectShiftButton.jpg"/></p>
+<p></p>
+<p><span>現在我們可以拖動場景中的任何點：圓柱體將跟隨運動，同時始終受到約束以保持相同的Z坐標。我們將圓柱複製並粘貼幾次，然後將其移動到</span><em><span>BubbleRob</span></em><span>周圍的<em>位置</em>（從頂部查看場景時執行該操作最方便）。在對象移動期間，按住Shift鍵可以執行較小的移動步驟。按住ctrl鍵可以在與</span><em><span>常規</span></em><span>方向正交的方向上移動。完成後，再次選擇相機平移工具欄按鈕：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/cameraShiftButton.jpg"/></p>
+<p></p>
+<p><span>我們將左馬達的</span><strong><span>目標速度</span></strong><span>設置為50並運行模擬：現在，圖形視圖顯示了到最近障礙物的距離，並且該距離段在場景中也可見。我們停止模擬並將目標速度重置為零。</span></p>
+<p><span>現在，我們需要完成</span><strong><span>BubbleRob</span></strong><span>作為</span><a href="https://www.coppeliarobotics.com/helpFiles/en/models.htm"><span>模型</span></a><span>定義。我們選擇模型庫（即對象</span><em><span>bubbleRob</span></em><span>），然後檢查項目</span><strong><span>Object是模型庫，</span></strong><span>並且</span><strong><span>Object / model可以轉移或接受</span></strong><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm"><span>對象</span></a><span>共有<a href="https://www.coppeliarobotics.com/helpFiles/en/commonPropertiesDialog.htm">屬性</a>中的<strong>DNA</strong>：現在有一個點畫框，它包圍了模型層次結構中的所有對象。我們選擇了兩個關節，即接近傳感器和圖形，然後啟用項目</span><strong><span>“不顯示為內部模型選擇”</span></strong><span>，然後在同一對話框中單擊“<span> </span></span><strong><span>應用於選擇”</span></strong><span>：模型邊界框現在忽略了兩個關節和接近傳感器。仍在同一對話框中，我們禁用</span><strong><span>相機可見性圖層</span></strong><span>2，並為兩個關節和力傳感器啟用</span><strong><span>攝像機可見性層</span></strong><span><span> </span>10：這有效地隱藏了兩個關節和力傳感器，因為默認情況下禁用第9-16層。我們可以隨時</span><a href="https://www.coppeliarobotics.com/helpFiles/en/layerSelectionDialog.htm"><span>修改整個場景的可見性層</span></a><span>。要完成模型定義，我們選擇視覺傳感器，兩個輪子，滑塊和圖形，然後啟用“<span> </span><strong>選擇模型基礎”</strong>項</span><strong><span></span></strong><span>：如果現在嘗試在場景中的模型中選擇一個對象，則將選擇整個模型，這是一種將整個模型作為單個對象進行處理和操作的便捷方法。此外，這可以防止模型受到意外修改。仍然可以通過在按住Shift的情況下單擊選擇模型對象，或者通常在場景層次中選擇它們，從而在場景中選擇模型中的單個對象。最後，我們將模型樹折疊到場景層次中。這就是我們所擁有的：</span></p>
+<p align="center"><img src="https://www.coppeliarobotics.com/helpFiles/en/images/bubbleRobTut7.jpg"/></p>
+<p class="imageLabel"><span>[<span> </span></span><em><span>BubbleRob</span></em><span>模型定義]</span></p>
+<p></p>
+<p><span>接下來，我們將在與<em>BubbleRob</em>接近傳感器相同的位置和方向上添加</span><a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensors.htm"><span>視覺</span></a><span>傳感器。我們再次打開模型層次結構，然後單擊[菜單欄-&gt;添加-&gt;視覺傳感器-&gt;透視類型]，然後將視覺傳感器連接到接近傳感器，並將視覺傳感器的本地位置和方向設置為（0,0,0）。我們還確保視覺傳感器不可見，不是模型邊界框的一部分，並且如果單擊該模型，則會選擇模型。為了自定義視覺傳感器，我們打開<a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensorPropertiesDialog.htm">其屬性</a>對話框。我們將“<span> </span><strong>遠裁剪平面”</strong>項設置為1，將“<span> </span><strong>分辨率x”</strong>和“<span> </span><strong>分辨率y”設置為</strong></span><em><span></span></em><span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/visionSensorPropertiesDialog.htm"><span></span></a><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span></span><strong><span></span></strong><span><span> </span>項目分別為256和256。我們向場景中添加了一個浮動視圖，然後在新添加的浮動視圖上，右鍵單擊[彈出菜單-&gt;視圖-&gt;將視圖與選定的視覺傳感器關聯]（我們確保視覺傳感器在該過程中被選中）。</span></p>
+<p><span>我們通過單擊[菜單欄-&gt;添加-&gt;關聯的子腳本-&gt;非線程]將非線程子腳本附加到視覺傳感器。我們雙擊場景層次結構中視覺傳感器旁邊出現的小圖標：這將打開我們剛剛添加的子腳本。我們將以下代碼複製並粘貼到</span><a href="https://www.coppeliarobotics.com/helpFiles/en/scriptEditor.htm"><span>腳本編輯器中</span></a><span>，然後將其關閉：</span></p>
+<br />CoppeliaSlim << <a href='CoppeliaSlim.html'>Previous</a> <a href='Building a clean model tutorial(建構純模型).html'>Next</a> >> Building a clean model tutorial(建構純模型)</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
