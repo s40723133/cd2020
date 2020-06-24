@@ -42,9 +42,6 @@
 <v t="leo.20200624155917.1"><vh>投影片</vh>
 <v t="leo.20200624155917.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20200624155936.1"><vh>投影片</vh>
-<v t="leo.20200624155936.2"><vh>封面投影片內容</vh></v>
-</v>
 <v t="leo.20200624155934.1"><vh>投影片</vh>
 <v t="leo.20200624155934.2"><vh>封面投影片內容</vh></v>
 </v>
@@ -359,23 +356,9 @@ vrep虛擬主機設置</t>
 						
 </t>
 <t tx="leo.20200624155934.2">## WEEK15~17
-[ipv6對外連線設定](https://s40723133.github.io/cd2020/content/WEEK15~17.html)</t>
-<t tx="leo.20200624155936.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
+[ipv6對外連線設定](https://s40723133.github.io/cd2020/content/WEEK15~17.html)
 
-
-						
-</t>
-<t tx="leo.20200624155936.2">## WEEK10~14
-
-可動四輪車模擬
-
-coppeliasim導入模組
-
-vrep虛擬主機設置</t>
+[ipv4對外連線設定](https://s40723133.github.io/cd2020/content/WEEK15~17.html)</t>
 <t tx="leo.20200624160319.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
