@@ -72,7 +72,6 @@
 Created by [40723133](https://s40723133.github.io/cd2020/content/index.html)
 &lt;/small&gt;
 
-[CMSimfly 網誌](./../blog/index.html)
 
 
 </t>
