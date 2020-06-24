@@ -154,13 +154,56 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">coppeliasim 導入模型並模擬 << <a href='coppeliasim 導入模型並模擬.html'>Previous</a> <a href='用Ubuntu開啟CoppeliaSim.html'>Next</a> >> 用Ubuntu開啟CoppeliaSim<br /><h1>Vrep虛擬主機設置</h1>
-<p><span mce-data-marked="1"><strong>1.先下載VirtualBoxrtualBox跟Ubuntu</strong></span></p>
-<p><span mce-data-marked="1"><strong>2.將Ubuntu匯入</strong></span></p>
-<p><span mce-data-marked="1"><strong>3.設定網路 Host-Only -Only 啟動Ubuntu主機</strong></span></p>
-<p><span mce-data-marked="1"><strong>4.輸入密碼kmol2020登入，開啟LXTermial</strong></span></p>
-<p><span mce-data-marked="1"> <iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/pzEZIyknwZQ" width="560"></iframe></span></p>
-<br />coppeliasim 導入模型並模擬 << <a href='coppeliasim 導入模型並模擬.html'>Previous</a> <a href='用Ubuntu開啟CoppeliaSim.html'>Next</a> >> 用Ubuntu開啟CoppeliaSim</div>
+    <div id="tipue_search_content">用Ubuntu開啟CoppeliaSim << <a href='用Ubuntu開啟CoppeliaSim.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim<br /><h1>WEEK15~17</h1>
+<h4>ipv6設定並連結上近端</h4>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/apt/apt.conf.d
+
+sudo vi proxy.conf
+
+#密碼為kmol2020
+
+
+cd /etc/netplan
+
+sudo vi 00-installer-config.yaml
+
+ </pre>
+<p>打入</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::Proxy "http://[2001:288:6004:17::XX]:3128";</pre>
+<p>esc :wq儲存</p>
+<p>進行更新</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
+<p>進行ifconfig</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ifconfig
+
+sudo apt install net-tools
+</pre>
+<p>進入 /etc/netplan 並且更改00-installer-config.yaml內容</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/netplan
+
+sudo vi 00-installer-config.yaml</pre>
+<p>將內容改成</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># This is the network config written by 'subiquity'
+network:
+    ethernets:
+        enpes3:
+            dhcp4: true
+            dhcp6: true
+            nameservers:
+                addresses:
+                    - 2001:b000:168::1
+    version: 2</pre>
+<p>主機IP為<span>2001:288:6004:17:2020:1::71XX (末兩碼為自己座號)</span></p>
+<p>客體IP 用ifconfig查詢</p>
+<p><img alt="" height="314" src="./../images/1592981824003.jpg" width="451"/></p>
+<p>進入cd2020pj1</p>
+<p>將wsgi.py的host都改成ifconfig查到客體IP</p>
+<p>開啟近端</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py
+</pre>
+<p>將ipv6位址填入2001:288:6004:17:2020:1::71XX(座號)</p>
+<p><img alt="" height="511" src="./../images/1592982238427.jpg" width="628"/></p>
+<p>將防火牆及proxy關閉就能用自己的電腦連結<br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/eLr5oit_UUs" width="560"></iframe></p><br />用Ubuntu開啟CoppeliaSim << <a href='用Ubuntu開啟CoppeliaSim.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim</div>
         
     <!-- footer -->
       <div class="container">
